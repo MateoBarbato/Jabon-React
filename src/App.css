@@ -2,6 +2,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
+}
+
+a{
+  text-decoration: none;
 }
 
 
@@ -67,7 +72,7 @@ margin-left: 2%;
 
 nav{
 
-width: 65%;
+width: 45%;
 }
 
 nav ul {
@@ -80,7 +85,32 @@ nav ul {
 }
 
 nav ul li{
-  /* width: 15%; */
+  
   text-align: center;
-  height: 2vh;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2vh;
+}
+
+/* BOTONES DEL NAV BAR */
+
+ 
+ @media all and (max-width: 550px) {
+
+  header h1 {
+    width: 15%;
+    font-size: large;
+  }
+
+  nav{
+    width: 78%;
+  }
+
+  nav ul li a{
+    font-size: medium;
+  }
 }

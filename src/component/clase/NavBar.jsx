@@ -9,16 +9,16 @@ export const NavBar = () =>{
     <nav>
       <ul className="nav-ul">
         <li>
-          Jabones
+          <a href='' className='button'>Jabones </a>
         </li>
         <li>
-          Miscelaneos
+          <a href='' className='button'>Miscelaneos</a>
         </li>
         <li>
-          Nosotros
+          <a href='' className='button'>Nosotros</a>
         </li>
         <li>
-          Carrito
+          <a href='' className='button'>Carrito </a>
         </li>
       </ul>
     </nav>
