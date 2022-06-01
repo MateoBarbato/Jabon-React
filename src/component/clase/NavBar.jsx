@@ -1,24 +1,32 @@
 import React from 'react';
+import image from '../../soap.png'
 
 export const NavBar = () =>{
-// PUEDO EJECUTAR JAVASCRIPT ACA
+// PUEDO EJECUTAR JAVASCRIPT ACA    
     return <header>
-    <h1>
-      Jaboon
-    </h1>
+    <div className='brand-container'>
+        <div className='name-img-container'>
+        <h1>
+          Jaboon
+        </h1>
+        <div className='image-div'>
+          <img src={image} alt="" />
+        </div>
+        </div>
+    </div>
     <nav>
       <ul className="nav-ul">
         <li>
-          <a href='' className='button'>Jabones </a>
+          <a href='' className='a-link-nav'>Jabones </a>
         </li>
         <li>
-          <a href='' className='button'>Miscelaneos</a>
+          <a href='' className='a-link-nav'>Miscelaneos</a>
         </li>
         <li>
-          <a href='' className='button'>Nosotros</a>
+          <a href='' className='a-link-nav'>Nosotros</a>
         </li>
         <li>
-          <a href='' className='button'>Carrito </a>
+          <a href='' className='a-link-nav'>Carrito </a>
         </li>
       </ul>
     </nav>
