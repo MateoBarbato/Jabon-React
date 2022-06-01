@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +42,45 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/* HEADER */
+
+header{
+  background-color: #fbefcc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  border-bottom: rgba(244, 166, 136, 0.33) solid 2px;
+  
+}
+
+header h1{
+margin-left: 2%;
+}
+
+nav{
+
+width: 65%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 5vh;
+  align-items: center;
+}
+
+nav ul li{
+  /* width: 15%; */
+  text-align: center;
+  height: 2vh;
 }
