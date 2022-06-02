@@ -72,11 +72,12 @@ width: 25%;
 }
 
 .name-logo-container{
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  max-width: 300px;
+  max-width: 450px;
   
 }
 
@@ -171,6 +172,7 @@ nav ul li a{
   .logo-div{
     width: 15%;
     transition: 700ms ease;
+    max-width: 95px;
   }
   header h1{
     font-size: 4vh;
