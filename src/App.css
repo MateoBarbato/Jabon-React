@@ -129,13 +129,19 @@ nav ul li a{
 @media all and (min-width: 980px) {
   .image-div{
     width: 25%;
-    transition: 200ms;
+    transition: 700ms ease;
   }
 }
 @media all and (min-width: 1500px) {
   .image-div{
     width: 20%;
-    transition: 200ms;
+    transition: 700ms ease;
+  }
+}
+@media all and (min-width: 1900px) {
+  .image-div{
+    width: 15%;
+    transition: 700ms ease;
   }
 }
 
@@ -144,7 +150,7 @@ nav ul li a{
 @media all and (max-width: 980px) {
   .image-div{
     width: 35%;
-    transition: 200ms;
+    transition: 700ms ease;
   }
 }
 
@@ -153,7 +159,7 @@ nav ul li a{
     width: 35%;
   
     display: none;
-    transition: 200ms;
+    transition: 700ms;
   }
 }
 
