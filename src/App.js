@@ -1,10 +1,13 @@
-import image from './soap.png';
+
 import './App.css';
-import {NavBar} from './component/clase/NavBar'
-// import NavBarMaterialize from './component/clase/NavBarMaterialize'
+import {NavBar} from './component/NavBar'
+import {ItemListContainer} from './component/ItemListContainer'
 
 function App() {
-  return <NavBar />;
+  return <>
+    <NavBar />
+    <ItemListContainer/>
+  </>;
 }
 
 export default App;
