@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../soap.png'
 import {CartWidget} from './CartWidget'
 
-export const NavBar = () =>{
+const NavBar = () =>{
 // PUEDO EJECUTAR JAVASCRIPT ACA    
     return <>
        
@@ -36,3 +36,5 @@ export const NavBar = () =>{
       
   </>
 }
+
+export default NavBar;

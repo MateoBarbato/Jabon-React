@@ -1,7 +1,19 @@
 import React from 'react'
 
-export const ItemListContainer = ()=>{
-   return   <section className="itemlistcontainer">
-                <h2>He aqui mi catalogo!</h2>
-            </section>
+class ItemListContainer extends React.Component {
+  constructor(props){
+      super(props)
+      this.text ='He aqui mi catalogo!'
+  }
+
+  render() {
+      const greeting=this.text
+    return <>
+    <section className="itemlistcontainer">
+        <h2>{greeting}</h2>
+    </section>
+    </>
+  }
 }
+
+export default ItemListContainer;
