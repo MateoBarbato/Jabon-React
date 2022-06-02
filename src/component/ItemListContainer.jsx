@@ -1,9 +1,10 @@
 import React from 'react'
 
 const ItemListContainer = props =>{
+  const {greeting} = props;
    return <>
     <section className="itemlistcontainer">
-        <h2>{props.greeting}</h2>
+        <h2>{greeting}</h2>
     </section>
     </>
 }
