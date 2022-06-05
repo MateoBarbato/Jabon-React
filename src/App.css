@@ -205,33 +205,43 @@ border-radius: 25px;
 
 footer{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 1vh;
   background-color: #113f67;
+  height: 10vh;
+  justify-content: center;
 }
 footer ul{
   display: flex;
   /* flex-wrap: wrap; */
-  flex-direction: column;
-
+  flex-direction: row;
 }
 footer ul li{
   list-style: none;
   margin: auto;
-  
+  height: 25%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 footer ul li a {
   color: #e7eaf6;
 }
 
+.footer-div-marca{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;  
+}
 
-footer h2 {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+footer h2,h4 {
+  /* height: 25%; */
+  width: 100%;
   color: #e7eaf6;
+  text-align: center;
+  margin: 1% 0;
 }
 
 
@@ -242,6 +252,10 @@ footer h2 {
     transition: 700ms ease;
     max-width: 90px;
   }
+  .itemlistcontainer{
+    grid-template-columns: repeat(4,1fr);
+  }
+
   header h1{
     font-size: 4vh;
     transition: 700ms ease;
@@ -275,8 +289,11 @@ footer h2 {
     width: 35%;
     transition: 700ms ease;
   }
-  .itemdescription{
-    font-size: medium;
+  .itemlistcontainer{
+    grid-template-columns: repeat(2,1fr);
+  }
+  nav{
+    width: 78%;
   }
 }
 
@@ -304,9 +321,15 @@ footer h2 {
     font-size: large;
     transition: 700ms ease;
   }
+  
+  .itemlistcontainer{
+    grid-template-columns: repeat(1,1fr);
+  }
 
-  nav{
-    width: 78%;
+  footer ul{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
   }
 
   nav ul{
