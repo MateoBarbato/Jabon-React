@@ -1,11 +1,8 @@
 import './App.css';
-import NavBar from './component/NavBar'
-import ItemListContainer from './component/ItemListContainer'
-const greeting = 'He aqui mi catalogo!'
+import PaginaContainer from './component/PaginaContainer';
 function App() {
   return <>
-    <NavBar />
-    <ItemListContainer greeting = {greeting}/>
+    <PaginaContainer/>
   </>;
 }
 

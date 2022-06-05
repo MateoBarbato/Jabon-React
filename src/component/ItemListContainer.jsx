@@ -1,12 +1,17 @@
 import React from 'react'
+import Item from './Item'
 
-const ItemListContainer = props =>{
-  const {greeting} = props;
-   return <>
-    <section className="itemlistcontainer">
-        <h2>{greeting}</h2>
-    </section>
-    </>
+const ItemListContainer = ()=>{
+    return <>
+        <section className="itemlistcontainer">
+            <Item/>
+            <Item/>
+            <Item/>
+            <Item/>
+            <Item/>
+            <Item/>
+        </section>
+        </>
 }
 
 export default ItemListContainer;
