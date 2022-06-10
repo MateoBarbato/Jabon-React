@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState} from 'react'
-import '../ItemCount.css'
+import '../css/ItemCount.css'
 
 
 const ItemCount= ({stock,initial})=>{
@@ -17,7 +17,7 @@ const ItemCount= ({stock,initial})=>{
     }
     const decrease= ()=>{
         if(number >0){
-            setNumber(number-1)
+         return   setNumber(number-1)
         }
     }
 
