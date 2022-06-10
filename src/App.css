@@ -162,6 +162,8 @@ nav ul li a{
   gap: 2vh;
   /* cambiar el 1 por 2 para que muestre 2 items, etc, el 1fr es la fraccion que ocuparia cada uno */
   margin: 2%;
+  
+
 }
 .itemlistcontainer h2 {
   font-size: 5rem;
@@ -185,6 +187,7 @@ border-radius: 25px;
 
 .itemimg{
   width: 50%;
+  margin: 2% 0;
 
 
 }
@@ -236,7 +239,15 @@ align-items: center;
 justify-content: center;  
 }
 
-footer h2,h4 {
+footer h2 {
+  /* height: 25%; */
+  width: 100%;
+  color: #e7eaf6;
+  text-align: center;
+  margin: 1% 0;
+}
+
+footer h4 {
   /* height: 25%; */
   width: 100%;
   color: #e7eaf6;
