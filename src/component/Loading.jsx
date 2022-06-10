@@ -4,10 +4,10 @@ import image from '../soap.png'
 
 const Loading = ()=>{
 return    <div className="loadingcontainer">
-                    <div class="spinner">
+                    <div className="spinner">
                     <img src={image} alt="soap with foam , logo of the brand" />
                     </div> 
-                    <div class="loader"></div>
+                    <div className="loader"></div>
           </div>
 }
 

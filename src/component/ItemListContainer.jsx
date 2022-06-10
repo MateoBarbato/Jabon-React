@@ -14,14 +14,14 @@ useEffect(() => {
         setTimeout(() => {
         itemsPromise.then((itemsDB)=>{setItems([...itemsDB])})
         .catch(()=>{console.log('que paso wn')})
-        .finally(()=>{setSpinner(false)})
+        .finally(()=>{setSpinner(false);console.log('cargue bien')})
         }, 2000);
     },[]);
 
     return <>
-        {spinner ? <Loading/> : console.log('cargado') }
+        {spinner ? <Loading/> : console.log('mostre items') }
         <section className="itemlistcontainer">
-        {itemsarr?.map((item)=>{return <Item key={item.id} precio={item.precio} name={item.name}  stock={item.stock} initial={item.initial} />})}
+        {itemsarr?.map((item)=>{return <Item key={item.id} precio={item.precio} name={item.name} description={item.description} stock={item.stock} initial={item.initial} />})}
         </section>
         </>
 }

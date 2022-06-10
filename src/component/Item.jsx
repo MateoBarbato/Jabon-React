@@ -1,20 +1,24 @@
 import React from 'react'
 import fotosrc from'../soapItem.png'
-import ItemCount from './ItemCount'
 
-const Item = ({id,precio,name,stock,initial})=>{
+const Item = ({id,precio,name,stock,initial,description})=>{
     
 
     return<>
         <article className="item">
+            <div className="title"> <h3>{name}</h3></div>
             <div className="itemimg">
             <img src={fotosrc} alt="Imagen de un Jabon Descriptiva del articulo" />
             </div>
             <div className="itemdescription">
-            <h4>{name}</h4>
-            <h5>Precio:{precio}</h5>
-            </div>         
-            <ItemCount stock={stock} initial={initial}/>   
+             <h5>{description}</h5>
+            </div>
+            <div className="buttondetalle">
+            <button className='button'>Ver detalle del producto</button>
+            </div>
+            <div className="stock">
+                <h3>Stock disponible:{stock}</h3>
+            </div>
         </article>
         
     </>
