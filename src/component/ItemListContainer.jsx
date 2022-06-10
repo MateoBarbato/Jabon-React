@@ -18,11 +18,14 @@ useEffect(() => {
         }, 2000);
     },[]);
 
+
+
     return <>
-        {spinner ? <Loading/> : console.log('mostre items') }
-        <section className="itemlistcontainer">
+        {spinner 
+        ? <Loading/> 
+        : <section className="itemlistcontainer">
         {itemsarr?.map((item)=>{return <Item key={item.id} precio={item.precio} name={item.name} description={item.description} stock={item.stock} initial={item.initial} />})}
-        </section>
+        </section>}
         </>
 }
 export default ItemListContainer;
