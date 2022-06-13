@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import {useState} from 'react'
-
 import Loading from './Loading'
 import itemsPromise from './itemsPromise'
 import ItemList from './ItemList';

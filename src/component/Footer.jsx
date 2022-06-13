@@ -16,8 +16,8 @@ const Footer=()=> {
           </li>
         </ul>
         <div className='footer-div-marca'>
-        <h2 >Jaboon Company ©</h2>
-        <h4>Jaboon.Company@gmail.com</h4>
+        <h4 >Jaboon Company ©</h4>
+        <h4><a href="/">Barbatomateo@gmail.com</a></h4>
         </div>
         
       </footer>
