@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import {useState} from 'react'
-import Item from './Item'
+
 import Loading from './Loading'
 import itemsPromise from './itemsPromise'
+import ItemList from './ItemList';
 
 const ItemListContainer = ()=>{
         
@@ -23,9 +24,9 @@ useEffect(() => {
     return <>
         {spinner 
         ? <Loading/> 
-        : <section className="itemlistcontainer">
-        {itemsarr?.map((item)=>{return <Item key={item.id} precio={item.precio} name={item.name} description={item.description} stock={item.stock} initial={item.initial} />})}
-        </section>}
+        :   <section className="itemlistcontainer">
+            <ItemList items={itemsarr}/>
+            </section>}
         </>
 }
 export default ItemListContainer;
