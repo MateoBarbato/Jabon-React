@@ -4,6 +4,8 @@ const ItemDetail = ({item}) => {
                     // 
                     // name,precio,description,stock,initial
     console.log(item)
+    
+    const {name,precio,description,stock,initial} = item
  
 
     // PONERLE SOMBRAS AL CSS? PUEDE QUEDAR BIEN PARA DESPEGARLO DEL FONDO BLANCO
@@ -14,13 +16,13 @@ const ItemDetail = ({item}) => {
                     <img src={imageurl} alt="" />
                 </div>
                 <div className="itemDetail_info">
-                    <h2 className='itemDetail_info_titulo'>{item.name}</h2>
+                    <h2 className='itemDetail_info_titulo'>{name}</h2>
                     <div className="itemDetail_info_description">
-                    <p>{item.description}</p>
-                    <p>{item.description}</p>
+                    <p>{description}</p>
+                    <p>{description}</p>
                     </div>
                     <div className='itemDetail_info_precio'>
-                    <p>{item.precio}</p>
+                    <p>{precio}</p>
                     <button className='button'>Add to cart</button>
                     </div>
                    

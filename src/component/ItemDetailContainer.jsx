@@ -7,14 +7,13 @@ import itemsPromise from './itemsPromise'
 
 const ItemDetailContainer = () => {
     const [spinner,setSpinner] = useState(false) 
-    const [item,setItem] = useState();
+    const [item,setItem] = useState({});
 
     useEffect(() => {
         setSpinner(true)
             setTimeout(() => {
             itemsPromise.then((items)=>{
-                setItem(items[1])
-                console.log(items[1])
+                setItem(items[2])
             })   
             .catch(()=>{console.log('que paso wn')})
             .finally(()=>{setSpinner(false);console.log('cargue bien')})
