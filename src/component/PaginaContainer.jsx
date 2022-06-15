@@ -1,15 +1,15 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import Main from './Main'
-
-
+import ItemDetailContainer from './ItemDetailContainer'
+import ItemListContainer from './ItemListContainer'
 
 const PaginaContainer =()=>{
 
     return  <>            
             <Header/>
-            <Main/>
+            <ItemDetailContainer/>
+            <ItemListContainer/>
             <Footer/>
             </>
 

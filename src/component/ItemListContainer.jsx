@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import {useState} from 'react'
 import Loading from './Loading'
-import itemsPromise from './itemsPromise'
+import {itemsPromise} from './itemsPromise'
 import ItemList from './ItemList';
 
 const ItemListContainer = ()=>{
@@ -11,11 +11,9 @@ const [itemsarr,setItems] = useState()
 
 useEffect(() => {
     setSpinner(true)
-        setTimeout(() => {
-        itemsPromise.then((itemsDB)=>{setItems([...itemsDB])})
-        .catch(()=>{console.log('que paso wn')})
-        .finally(()=>{setSpinner(false);console.log('cargue bien')})
-        }, 2000);
+    itemsPromise(2000).then(itemsarr=>{setItems(itemsarr)})
+    .catch(error=>{console.log(error)})
+    .finally(()=>{setSpinner(false)})
     },[]);
 
 

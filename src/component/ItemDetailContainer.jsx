@@ -1,24 +1,21 @@
 import React from 'react'
-import ItemDetail from './ItemDetail'
 import {useState,useEffect} from 'react'
+import ItemDetail from './ItemDetail'
 import Loading from './Loading'
-import itemsPromise from './itemsPromise'
+import {itemsPromiseid} from './itemsPromise'
 
 
 const ItemDetailContainer = () => {
     const [spinner,setSpinner] = useState(false) 
     const [item,setItem] = useState({});
 
-    useEffect(() => {
-        setSpinner(true)
-            setTimeout(() => {
-            itemsPromise.then((items)=>{
-                setItem(items[2])
-            })   
-            .catch(()=>{console.log('que paso wn')})
-            .finally(()=>{setSpinner(false);console.log('cargue bien')})
-            }, 2000);
-        },[]);
+    
+    useEffect(()=>{
+        setSpinner(true);
+        itemsPromiseid(1,2000).then(item=>{setItem(item)})
+        .catch(error=>{console.log(error)})
+        .finally(()=>{setSpinner(false)})
+    },[])
 
     return <>
        {spinner 
@@ -27,4 +24,4 @@ const ItemDetailContainer = () => {
     </>
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
