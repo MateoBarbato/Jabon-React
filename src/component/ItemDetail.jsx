@@ -1,8 +1,12 @@
 import React from 'react'
 import imageurl from '../soapItem.png'
-const ItemDetail = ({name='Cargando',precio='Cargando',description='Cargando',stock='Cargando',initial='Cargando'}) => {
+const ItemDetail = ({name='Cargando',precio='120',description='Cargando',stock='Cargando',initial='Cargando'}) => {
+                    // 
+                    // name,precio,description,stock,initial
+    console.log(name,precio,description,stock,initial)
+ 
 
-// PONERLE SOMBRAS AL CSS? PUEDE QUEDAR BIEN PARA DESPEGARLO DEL FONDO BLANCO
+    // PONERLE SOMBRAS AL CSS? PUEDE QUEDAR BIEN PARA DESPEGARLO DEL FONDO BLANCO
     return <>
         <div className="itemDetailContainer">
             <div className="itemDetail">

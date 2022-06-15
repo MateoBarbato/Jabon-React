@@ -6,16 +6,16 @@ import itemsPromise from './itemsPromise'
 
 
 const ItemDetailContainer = () => {
-    // pasarle el item al itemdetail para que lo pueda mostrar
     const [spinner,setSpinner] = useState(false) 
     const [item,setItem] = useState();
 
     useEffect(() => {
         setSpinner(true)
             setTimeout(() => {
-            itemsPromise.then((itemsDB)=>{
-                setItem(itemsDB[2]);
-            })
+            itemsPromise.then((items)=>{
+                setItem(items[1])
+                console.log(items[1])
+            })   
             .catch(()=>{console.log('que paso wn')})
             .finally(()=>{setSpinner(false);console.log('cargue bien')})
             }, 2000);
@@ -24,12 +24,8 @@ const ItemDetailContainer = () => {
     return <>
        {spinner 
         ? <Loading/> 
-        :<div className="detailContainer">
-            <ItemDetail key={item.id} precio={item.precio} name={item.name} description={item.description} stock={item.stock} initial={item.initial}/>
-         </div>}
-        
+        :<div className="detailContainer"><ItemDetail item={item}/></div>}
     </>
 }
-
 
 export default ItemDetailContainer
