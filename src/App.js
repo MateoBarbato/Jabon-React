@@ -1,15 +1,18 @@
-import './css/App.css';
+import React from 'react'
+import Header from './component/Header'
+import Footer from './component/Footer'
+import ItemDetailContainer from './component/ItemDetailContainer'
+import ItemListContainer from './component/ItemListContainer'
+import './css/App.css'
 import './css/ItemCount.css'
-import PaginaContainer from './component/PaginaContainer';
-// import {EjemploFetch} from './component/clase/EjemploFetch';
-// import {EjemploAxios} from './component/clase/EjemploAxios';
-
 
 
 function App() {
-  return <>
-    <PaginaContainer/>
-  </>;
+  return  <>            
+  <Header/>
+  <ItemDetailContainer/>
+  <Footer/>
+  </>
 }
 
 export default App;

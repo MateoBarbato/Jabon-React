@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
     
     useEffect(()=>{
         setSpinner(true);
-        itemsPromiseid(1,2000).then(item=>{setItem(item)})
+        itemsPromiseid(6,2000).then(item=>{setItem(item)})
         .catch(error=>{console.log(error)})
         .finally(()=>{setSpinner(false)})
     },[])

@@ -1,14 +1,14 @@
 import React from 'react'
-import fotosrc from'../soapItem.png'
+// import fotosrc from'../soapItem.png'
 
-const Item = ({id,precio,name,stock,initial,description})=>{
+const Item = ({id,precio,name,stock,initial,description,imageurl})=>{
     
 
     return<>
         <article className="item">
             <div className="title"> <h3>{name}</h3></div>
             <div className="itemimg">
-            <img src={fotosrc} alt="Imagen de un Jabon Descriptiva del articulo" />
+            <img src={process.env.PUBLIC_URL+imageurl} alt="Imagen de un Jabon Descriptiva del articulo" />
             </div>
             <div className="itemdescription">
              <h5>{description}</h5>

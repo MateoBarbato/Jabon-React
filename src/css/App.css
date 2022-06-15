@@ -210,6 +210,7 @@ border: 2px solid #a7bcb95e ;
   text-align: center;
   width: 100%;
   margin: 2% 0 ;
+  padding: 0 3%;
   font-size: large;
 }
 
@@ -236,8 +237,8 @@ border: 2px solid #a7bcb95e ;
   justify-content: center;
   width: 100%;
   padding:15%;
-  height: 50vh;
   min-height: 1000px;
+  transition: 700ms ease;
   
 }
 
@@ -245,22 +246,26 @@ border: 2px solid #a7bcb95e ;
   width: 100%;
   padding:3% 0;
   height: 100%;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .itemDetail{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+gap: 5vh;
+
 }
 
 .itemDetailimg{
-  width: 50%;
+  width: 75%;
   margin:auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 250px;
 }
 
 .itemDetailimg img {
@@ -279,21 +284,41 @@ border: 2px solid #a7bcb95e ;
 }
 
 .itemDetail_info_description{
-  margin-left: 10%;
+  margin-bottom: 10vh;
+}
+
+.itemDetail_info_description p {
+  font-size: large;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 .itemDetail_info_precio{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 8%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height:30%;
+}
+
+.itemDetail_info_precio .itemcount {
+  width: 60%;
+  flex-direction: column;
+  margin: 0;
+}
+
+.itemDetail_info_precio .itemcount .contador{
+  width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 2%;
 }
 
 .itemDetail_info_precio p{
   font-size: large;
   font-family: 'Oswald', sans-serif;
-  width: 80%;
-  margin-left: 20%;
-  text-align: left;
+  text-align: center;
+  font-weight: 600;
 }
 
 footer{
@@ -361,10 +386,6 @@ footer h4 a {
     transition: 700ms ease;
     max-width: 90px;
   }
-  .itemlistcontainer{
-    grid-template-columns: repeat(4,1fr);
-  }
-
   header h1{
     font-size: 4vh;
     transition: 700ms ease;
@@ -374,6 +395,10 @@ footer h4 a {
     font-size: 2vh;
     transition: 700ms ease;
   }
+  .itemlistcontainer{
+    grid-template-columns: repeat(4,1fr);
+  }
+
   .itemdescription{
     font-size: x-large;
   }
@@ -411,6 +436,17 @@ footer h4 a {
   nav{
     width: 78%;
   }
+
+  .itemDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    
+  }
+
+  .itemcount{
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width: 742px) {
@@ -441,6 +477,16 @@ footer h4 a {
   .itemlistcontainer{
     grid-template-columns: repeat(1,1fr);
   }
+  .itemDetail_info_precio{
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  .itemDetail_info_precio .itemcount .contador{
+    width: 75%;
+    transition: 700ms ease;
+  }
+  
 
   footer ul{
     display: flex;
@@ -461,6 +507,7 @@ footer h4 a {
     transition: 700ms ease;
   }
 }
+
 
 @media all and (max-width: 330px) {
 
