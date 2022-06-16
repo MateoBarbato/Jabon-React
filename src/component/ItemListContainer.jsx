@@ -8,6 +8,7 @@ const ItemListContainer = ()=>{
         
 const [spinner,setSpinner] = useState(false) 
 const [itemsarr,setItems] = useState()
+const [filter,setFilter] = useState("")
 
 useEffect(() => {
     setSpinner(true)
@@ -16,6 +17,9 @@ useEffect(() => {
     .finally(()=>{setSpinner(false)})
     },[]);
 
+    const filterItems = arritems => {
+        return filter !== "" ? arritems.filter(item => item.type === filter) : arritems;
+    }
 
 
     return <>

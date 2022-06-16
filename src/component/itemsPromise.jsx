@@ -63,3 +63,14 @@ export const itemsPromiseid = (id,timeout) => {
         }, timeout);
     })
 }
+
+export const itemsbyFilter = (filter,timeout) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(itemsDB.filter(item => 
+                // hay que agregar el fiter
+                item))
+            reject ('error al obtener el item con id :'+filter)
+        }, timeout);
+    })
+}
