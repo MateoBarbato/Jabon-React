@@ -8,6 +8,7 @@ const ItemDetail = ({item}) => {
 
     // PONERLE SOMBRAS AL CSS? PUEDE QUEDAR BIEN PARA DESPEGARLO DEL FONDO BLANCO
     return <>
+    <div className="detailContainer">
         <div className="itemDetailContainer">
             <div className="itemDetail">
                 <div className="itemDetailimg">
@@ -27,7 +28,7 @@ const ItemDetail = ({item}) => {
                 </div>
             </div>
         </div>
-
+    </div>
     </>
 }
 
