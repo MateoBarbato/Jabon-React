@@ -25,9 +25,7 @@ useEffect(() => {
     return <>
         {spinner 
         ? <Loading/> 
-        :   <section className="itemlistcontainer">
-            <ItemList items={itemsarr}/>
-            </section>}
+        : <div className="itemlistbackground"><ItemList items={itemsarr}/></div> }
         </>
 }
 export default ItemListContainer;

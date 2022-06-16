@@ -54,6 +54,7 @@ a{
 body {
   /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
 /* HEADER  ><><><><><><><><><><<><><><><><><><><><><><><><><><><>><><><*/
@@ -158,13 +159,25 @@ nav ul li a{
 
 /* ITEM CONTAINER ><><><><><><><><><><><><><><><><><><<><>><><><><><><><><><>>< */
 
+.itemlistbackground{
+  background-image: url('../background.svg');
+  background-size: cover;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  padding: 0%;
+  margin: 0;
+  min-height: 1000px;
+}
+
 .itemlistcontainer{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 5vh;
-  margin: 5vh auto;
-  width: 70%;
-
+  margin: 0vh auto;
+  padding: 5vh 0;
+  width: 70%; 
+  
 }
 
 .item{
@@ -173,7 +186,8 @@ justify-content: space-evenly;
 align-items: center;
 flex-direction: column;
 height: 100%;
-background-color: #ececec;
+/* background-color: #ececec; */
+background-color: white;
 border-radius: 25px;
 border: 2px solid #a7bcb95e ;
 
@@ -182,7 +196,7 @@ border: 2px solid #a7bcb95e ;
 .title{
   width: 100%;
   border-radius: 25px 25px 0 0;
-  background-color: #DADADA;
+  /* background-color: #DADADA; */
   margin-bottom: 2%;
 }
 
@@ -217,7 +231,7 @@ border: 2px solid #a7bcb95e ;
 .stock{
   width: 100%;
   border-radius:0 0 25px 25px ;
-  background-color: #DADADA;
+  /* background-color: #DADADA; */
   border-top: 2px #a7bcb98c solid;
   margin-top: 2%;
 }
@@ -236,9 +250,12 @@ border: 2px solid #a7bcb95e ;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding:10%;
+  padding: 0 10%;
   min-height: 1000px;
   transition: 700ms ease;
+  background-image: url('../background.svg');
+  background-size: cover;
+  z-index: -1;
   
 }
 
@@ -249,6 +266,13 @@ border: 2px solid #a7bcb95e ;
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  min-height: 600px;
+  border-radius: 10px;
+  box-shadow: -5px 10px 16px 0px rgb(0 0 0 / 20%), 5px 6px 20px 5px rgb(0 0 0 / 19%);
+  background-color: white;
+  max-width: 1200px;
+  
+  
 }
 
 .itemDetail{
@@ -256,16 +280,21 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 gap: 5vh;
+min-height: 600px;
+padding: 0 3%;
+
 
 }
 
 .itemDetailimg{
   width: 75%;
-  margin:auto;
+  /* margin:auto; */
+  padding: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 250px;
+  max-width: 350px;
+
 }
 
 .itemDetailimg img {
@@ -441,6 +470,7 @@ footer h4 a {
     display: flex;
     flex-direction: column;
     gap: 4vh;
+    padding: 5% 3%;
     
   }
 

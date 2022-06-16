@@ -10,7 +10,9 @@ const ItemList = ({ items }) => {
 
 
     return <>
-    {items?.map((item)=>{return <Item key={item.id} precio={item.precio} name={item.name} description={item.description} stock={item.stock} initial={item.initial} />})}
+        <section className="itemlistcontainer">
+        {items?.map((item)=>{return <Item key={item.id} precio={item.precio} name={item.name} description={item.description} stock={item.stock} initial={item.initial} imageurl={item.imageurl} />})}
+        </section>
     </>
         
 }
