@@ -1,19 +1,13 @@
 import React from 'react'
-import Header from './component/Header'
-import Footer from './component/Footer'
-import ItemDetailContainer from './component/ItemDetailContainer'
-import ItemListContainer from './component/ItemListContainer'
+import AppRouting from './component/AppRouting'
 import './css/App.css'
 import './css/ItemCount.css'
 
 
 function App() {
   return  <>            
-  <Header/>
-  <ItemDetailContainer/>
-  {/* <ItemListContainer/> */}
-  <Footer/>
-  </>
+          <AppRouting/>
+          </>
 }
 
 export default App;

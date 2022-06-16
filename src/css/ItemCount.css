@@ -56,6 +56,7 @@
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: large;
+  max-height: 2vh;
 }
 
 .button:focus {
