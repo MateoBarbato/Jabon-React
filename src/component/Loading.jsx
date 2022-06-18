@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Loading.css'
-import image from '../soap_jaboon.png'
+import image from '../logo192.png'
 
 const Loading = ()=>{
 return    <div className="loadingcontainer">

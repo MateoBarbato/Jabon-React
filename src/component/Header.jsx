@@ -16,7 +16,7 @@ const Header = () =>{
         <div className='name-logo-container'>
         <Link to='/'>
         <h1>
-          Jaboon
+          Gab Art Gallery
         </h1>
         </Link>
           {/* <div className='logo-div'>
@@ -27,11 +27,11 @@ const Header = () =>{
     <nav>
         <ul >
           <li>
-          <Link to='/category/soapbar'>Jabones</Link>
+          <Link to='/category/soapbar'>Cuadros</Link>
           </li>
-          <li>
+          {/* <li>
           <Link to='/category/misc'>Miscelaneos</Link>
-          </li>
+          </li> */}
           <li>
             {/* <a href='/Nosotros' className='a-link-nav'>Nosotros</a> */}
             <Link to='/nosotros'>Nosotros</Link>
