@@ -61,12 +61,12 @@ body {
 
 header{
   /* background-color: #9fd3c7; */
-  background-color: white;
+  background-color: #113f67;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  /* border-bottom: rgba(244, 166, 136, 0.33) solid 2px; */
+  border-bottom: rgba(244, 166, 136, 0.33) solid 2px;
   
 }
 
@@ -86,17 +86,23 @@ width: 25%;
 
 .name-logo-container h1{
 margin-left: 2%;
-color: black;
-border-bottom: 1px solid black;
-transition: 700ms ease;
+/* color: #385170; */
+/* color: #a2a8d3; */
+color: #e7eaf6;
+/* font-family: 'Staatliches', cursive; */
 }
 
-.name-logo-container h1:hover{
-  font-size: 35px;
-  transition: 0.5s ease;
 
+.logo-div{
+  width: 25%;
+  overflow:hidden;
+  transition: 700ms ease;
+  max-width: 60px;
 }
 
+.logo-div img {
+  width:100%;
+}
 
 nav{
 display: flex;
@@ -124,17 +130,15 @@ nav ul li{
 
 nav ul li a{
   text-decoration: none;
-  color: black;
+  /* color: #385170; */
+  /* color: #a2a8d3; */
+  color: #e7eaf6;
   font-family: 'Oswald', sans-serif;
-  border-bottom: 1px solid black;
-  font-size: 24px;
+  
+  font-size: x-large;
   transition: 700ms ease;
 }
-nav ul li a:hover{
-font-size: 28px;
-transition: 0.5s ease;
 
-}
 .cartlogo-container{
   width: 10%;
   max-width: 50px;
@@ -144,8 +148,7 @@ transition: 0.5s ease;
 
 .cartlogo-container button{
   background: none;
-  /* border: grey solid 1px; */
-  border: none;
+  border: grey solid 1px;
   width: 100%;
 }
 

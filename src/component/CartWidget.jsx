@@ -1,5 +1,5 @@
 import React from 'react'
-import cartlogo from '../shopping-cart.png'
+import cartlogo from '../carrito.png'
 
 const CartWidget = ()=>{
         function onclickstatus (){
