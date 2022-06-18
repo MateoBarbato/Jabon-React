@@ -66,15 +66,16 @@ header{
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  border-bottom:black solid 1px;
+  /* border-bottom: rgba(244, 166, 136, 0.33) solid 2px; */
   
 }
 
 .brand-container{
-width: 35%;
+width: 25%;
 }
 
 .name-logo-container{
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -84,6 +85,7 @@ width: 35%;
 }
 
 .name-logo-container h1{
+margin-left: 2%;
 color: black;
 border-bottom: 1px solid black;
 transition: 700ms ease;
@@ -149,18 +151,13 @@ transition: 0.5s ease;
 
 .cartlogo-container img{
   width: 100%;
-  transition: 0.3s ease;
-}
-
-.cartlogo-container img:hover{
-  width: 110%;
-  transition: 0.3s ease;
+  transition: 700ms ease;
 }
 
 /* ITEM CONTAINER ><><><><><><><><><><><><><><><><><><<><>><><><><><><><><><>>< */
 
 .itemlistbackground{
-  /* background-image: url('../background.svg'); */
+  background-image: url('../background.svg');
   background-size: cover;
   z-index: -1;
   height: 100%;
@@ -362,10 +359,9 @@ footer{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 1vh;
+  background-color: #113f67;
   height: 10vh;
   justify-content: center;
-  color: black;
-  border-top: 1px solid black;
 }
 footer ul{
   display: flex;
@@ -382,6 +378,7 @@ footer ul li{
 }
 
 footer ul li a {
+  color: #e7eaf6;
 }
 
 .footer-div-marca{
@@ -392,15 +389,25 @@ justify-content: center;
 
 }
 
+footer h2 {
+  /* height: 25%; */
+  width: 100%;
+  color: #e7eaf6;
+  text-align: center;
+  margin: 1% 0;
+}
+
 footer h4 {
   /* height: 25%; */
   width: 100%;
+  color: #e7eaf6;
   text-align: center;
   margin: 1% 0;
   font-size: 20px;
 }
 
 footer h4 a {
+  color: #e7eaf6;
   font-size: 20px;
   font-weight: 400;
 }
