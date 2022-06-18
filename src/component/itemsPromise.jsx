@@ -2,46 +2,52 @@
 const itemsDB = [
     {id : 1,
     name: 'Jabonardo',
+    type:"soapbar",
     precio : '120$',
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 5,
     initial : 1,
-    imageurl:'./soapItem.png'},
+    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
     {id : 2,
     name: 'Jabonardo',
+    type:"soapbar",
     precio : '120$',
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 6,
     initial : 1,
-    imageurl:'./soapItem.png'},
+    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
     {id : 3,
-    name: 'Jabonardo',
+    name: 'Liquid Soap',
+    type:"misc",
     precio : '120$',
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 5,
     initial : 1,
-    imageurl:'./soapItem.png'},
+    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
     {id : 4,
     name: 'Jabonardo',
+    type:"soapbar",
     precio : '120$',
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 7,
     initial : 1,
-    imageurl:'./soapItem.png'},
+    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
     {id : 5,
-    name: 'Jabonardo',
+    name: 'Liquid Soap',
+    type:"misc",
     precio : '120$',
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 2,
     initial : 1,
-    imageurl:'./soapItem.png'},
+    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
     {id : 6,
-    name: 'Jabonardo',
+    name: 'Liquid Soap',
+    type:"misc",
      precio : '120$',
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 3,
     initial : 1,
-    imageurl:'./soapItem.png'}]
+    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'}]
 
 export const itemsPromise = (timeout) => {
     return new Promise((resolve, reject) => {
@@ -58,7 +64,7 @@ export const itemsPromise = (timeout) => {
 export const itemsPromiseid = (id,timeout) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(itemsDB.find(item => item.id === id))
+            resolve(itemsDB.filter(item => item.id===2))
             reject ('error al obtener el item con id :'+id)
         }, timeout);
     })

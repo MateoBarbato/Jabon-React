@@ -11,18 +11,21 @@ const ItemDetailContainer = () => {
     const [spinner,setSpinner] = useState(false) 
     const [item,setItem] = useState({});
 
-    
+    console.log(item)
+
     useEffect(()=>{
         setSpinner(true);
-        itemsPromiseid(id,2000).then(item=>{setItem(item)})
+        itemsPromiseid(parseFloat(id),2000)
+        .then(item=>{setItem(item[0])})
         .catch(error=>{console.log(error)})
         .finally(()=>{setSpinner(false)})
     },[id])
 
+
     return <>
        {spinner 
         ? <Loading/> 
-        :<ItemDetail item={item}/>}
+        : <ItemDetail item={item}/>}
     </>
 }
 

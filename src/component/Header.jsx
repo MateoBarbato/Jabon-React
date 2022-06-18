@@ -5,30 +5,36 @@ import {Link} from 'react-router-dom';
 
 const Header = () =>{
 // PUEDO EJECUTAR JAVASCRIPT ACA    
+
+
+
     return <>
        
         <header>
+        
     <div className='brand-container'>
         <div className='name-logo-container'>
+        <Link to='/'>
         <h1>
           Jaboon
         </h1>
-        <div className='logo-div'>
+        </Link>
+          <div className='logo-div'>
           <img src={image} alt="Logo de la pagina, un dispensador de jabon y espuma." />
-        </div>
+          </div>
         </div>
     </div>
     <nav>
         <ul >
           <li>
-            <a href='/' className='a-link-nav'>Jabones </a>
+          <Link to='/category/soapbar'>Jabones</Link>
           </li>
           <li>
-            <a href='/' className='a-link-nav'>Miscelaneos</a>
+          <Link to='/category/misc'>Miscelaneos</Link>
           </li>
           <li>
             {/* <a href='/Nosotros' className='a-link-nav'>Nosotros</a> */}
-            <Link to='/Nosotros'>Nosotros</Link>
+            <Link to='/nosotros'>Nosotros</Link>
           </li>
         </ul>
         <CartWidget/>
