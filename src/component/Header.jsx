@@ -19,9 +19,9 @@ const Header = () =>{
           Jaboon
         </h1>
         </Link>
-          <div className='logo-div'>
+          {/* <div className='logo-div'>
           <img src={image} alt="Logo de la pagina, un dispensador de jabon y espuma." />
-          </div>
+          </div> */}
         </div>
     </div>
     <nav>

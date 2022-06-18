@@ -61,12 +61,12 @@ body {
 
 header{
   /* background-color: #9fd3c7; */
-  background-color: #113f67;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  border-bottom: rgba(244, 166, 136, 0.33) solid 2px;
+  /* border-bottom: rgba(244, 166, 136, 0.33) solid 2px; */
   
 }
 
@@ -86,23 +86,17 @@ width: 25%;
 
 .name-logo-container h1{
 margin-left: 2%;
-/* color: #385170; */
-/* color: #a2a8d3; */
-color: #e7eaf6;
-/* font-family: 'Staatliches', cursive; */
+color: black;
+border-bottom: 1px solid black;
+transition: 700ms ease;
 }
 
+.name-logo-container h1:hover{
+  font-size: 35px;
+  transition: 0.5s ease;
 
-.logo-div{
-  width: 25%;
-  overflow:hidden;
-  transition: 700ms ease;
-  max-width: 60px;
 }
 
-.logo-div img {
-  width:100%;
-}
 
 nav{
 display: flex;
@@ -130,15 +124,17 @@ nav ul li{
 
 nav ul li a{
   text-decoration: none;
-  /* color: #385170; */
-  /* color: #a2a8d3; */
-  color: #e7eaf6;
+  color: black;
   font-family: 'Oswald', sans-serif;
-  
-  font-size: x-large;
+  border-bottom: 1px solid black;
+  font-size: 24px;
   transition: 700ms ease;
 }
+nav ul li a:hover{
+font-size: 28px;
+transition: 0.5s ease;
 
+}
 .cartlogo-container{
   width: 10%;
   max-width: 50px;
@@ -148,7 +144,8 @@ nav ul li a{
 
 .cartlogo-container button{
   background: none;
-  border: grey solid 1px;
+  /* border: grey solid 1px; */
+  border: none;
   width: 100%;
 }
 
