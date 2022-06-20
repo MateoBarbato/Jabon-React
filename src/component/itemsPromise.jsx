@@ -7,7 +7,7 @@ const itemsDB = [
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 5,
     initial : 1,
-    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
+    imageurl:'https://i.postimg.cc/d0gmQLJx/ezgif-1-af262c8f1c.png'},
     {id : 2,
     name: 'Jabonardo',
     type:"soapbar",
@@ -15,7 +15,7 @@ const itemsDB = [
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 6,
     initial : 1,
-    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
+    imageurl:'https://i.postimg.cc/d0gmQLJx/ezgif-1-af262c8f1c.png'},
     {id : 3,
     name: 'Liquid Soap',
     type:"misc",
@@ -23,7 +23,7 @@ const itemsDB = [
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 5,
     initial : 1,
-    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
+    imageurl:'https://i.postimg.cc/MGnm8yJB/ezgif-1-742412795b.png'},
     {id : 4,
     name: 'Jabonardo',
     type:"soapbar",
@@ -31,7 +31,7 @@ const itemsDB = [
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 7,
     initial : 1,
-    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
+    imageurl:'https://i.postimg.cc/d0gmQLJx/ezgif-1-af262c8f1c.png'},
     {id : 5,
     name: 'Liquid Soap',
     type:"misc",
@@ -39,7 +39,7 @@ const itemsDB = [
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 2,
     initial : 1,
-    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'},
+    imageurl:'https://i.postimg.cc/MGnm8yJB/ezgif-1-742412795b.png'},
     {id : 6,
     name: 'Liquid Soap',
     type:"misc",
@@ -47,7 +47,8 @@ const itemsDB = [
     description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.',
     stock : 3,
     initial : 1,
-    imageurl:'https://i.postimg.cc/hG9z6gzT/soapItem.png'}]
+    imageurl:"https://i.postimg.cc/MGnm8yJB/ezgif-1-742412795b.png"}]
+    
 
 export const itemsPromise = (timeout) => {
     return new Promise((resolve, reject) => {

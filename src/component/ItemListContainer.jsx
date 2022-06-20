@@ -25,7 +25,7 @@ useEffect(() => {
     setSpinner(true)
     
     console.log(type)
-    itemsPromise(100).then(itemsarr=>
+    itemsPromise(2000).then(itemsarr=>
         {setItems(filter !== "" ? filteritems(itemsarr) : itemsarr)})
     .catch(error=>{console.log(error)})
     .finally(()=>{setSpinner(false)})
