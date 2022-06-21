@@ -416,6 +416,39 @@ footer h4 a {
 }
 
 
+.notFoundContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5% 0;
+}
+
+.notFoundContainer h2{
+  font-size: 32px;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  margin: 1% 0;
+}
+
+.notFoundContainer a {
+  font-size: 20px;
+  font-weight: 400;
+  
+}
+
+.notFoundContainer a:hover{
+text-decoration: underline 2px black;
+  
+}
+
+.notFoundContainer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* RESPONSIVE */
 @media all and (min-width: 1900px) {
   .logo-div{
@@ -504,6 +537,21 @@ footer h4 a {
 
   .itemcount{
     flex-direction: column;
+  }
+
+  .notFoundContainer div img{
+    width: 75%;
+  }
+
+  .notFoundContainer h2{
+    font-size: 24px;
+    
+  }
+  
+  .notFoundContainer a {
+    font-size: 16px;
+    font-weight: 400;
+    
   }
 }
 
