@@ -9,7 +9,7 @@ const NotFound = () => {
         <Link to='/'>
         <h3>Volver al Inicio </h3>
         </Link>
-        <div>
+        <div >
             <img src='https://i.postimg.cc/SRSWjQvH/404-Error-rafiki.png' alt="error 404 pagina no encontrada" />
         </div>
         
