@@ -6,6 +6,7 @@ import Footer from './component/Footer';
 import NosotrosContainer from './component/NosotrosContainer';
 import ItemDetailContainer from './component/ItemDetailContainer';
 import NotFound from './component/NotFound';
+import Cart from './component/Cart'
 import './css/App.css'
 import './css/ItemCount.css'
 
@@ -17,10 +18,11 @@ function App() {
           <BrowserRouter>
           <Header />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home />} /> 
               <Route path="/nosotros" element={ <NosotrosContainer />} />
               <Route path='/item/:id' element={ <ItemDetailContainer/>} />
               <Route path='/category/:type' element={ <Home />} />   
+              <Route path='/cart' element={<Cart/>}/>
               <Route path='*' element={ <NotFound/>} />
             </Routes>
             <Footer />

@@ -3,7 +3,7 @@ import { useState} from 'react'
 import '../css/ItemCount.css'
 
 
-const ItemCount= ({stock,initial})=>{
+const ItemCount= ({stock,initial,onAdd})=>{
 
     const [number,setNumber]= useState(initial)
     
@@ -12,14 +12,21 @@ const ItemCount= ({stock,initial})=>{
 
     const increase=()=>{
         if(number < stock){
-         return setNumber(number+1)
+         return setNumber(prevNumber=>prevNumber+1)
         }
     }
     const decrease= ()=>{
         if(number >0){
-         return   setNumber(number-1)
+         return   setNumber(prevNumber=>prevNumber-1)
         }
     }
+
+    const handleItemcount = (e)=>{
+        e.stopPropagation()
+
+        onAdd(false)
+    }
+
 
     return <>
         <div className='itemcount'>
@@ -34,7 +41,7 @@ const ItemCount= ({stock,initial})=>{
              </div>
              {num0 
              ? <button disabled className='disabled' >Agregar al carrito</button>
-             : <button className='button'>Agregar al carrito</button>}
+             : <button className='button' onClick={handleItemcount}>Agregar al carrito</button>}
         </div>
     </>
 }
