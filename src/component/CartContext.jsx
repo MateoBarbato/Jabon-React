@@ -25,3 +25,11 @@ function removeItem (itemid) {
     SetitemsCart(arraynuevo)
 
 }
+
+function isInCart (id) {
+    
+    itemsCart.findIndex(item=>item.id == id)
+    ?true
+    :false
+
+}
