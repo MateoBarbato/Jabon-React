@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { createContext } from "react";
 
-const CartContext = React.createContext();
+const CartContext = createContext();
+
+const CartContextProvider = ({children})=>{
 
 const [itemsCart,SetitemsCart] = useState();
 
@@ -31,5 +33,13 @@ function isInCart (id) {
     itemsCart.findIndex(item=>item.id == id)
     ?true
     :false
+
+}
+
+    return(
+        <CartContext.Provider value={{addItem,clear,removeItem,isInCart}}>
+            {children}
+        </CartContext.Provider>
+    )
 
 }
