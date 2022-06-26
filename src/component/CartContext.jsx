@@ -1,45 +1,58 @@
 import { useState } from "react";
 import { createContext } from "react";
 
-const CartContext = createContext();
+export const CartContext = createContext();
 
 const CartContextProvider = ({children})=>{
 
-const [itemsCart,SetitemsCart] = useState();
+const [itemsCart,setItemsCart] = useState([]);
 
-function addItem(item,quantity){
-    const arraynuevo=[]
-    for (let index = 0; index < quantity; index++) {
-        arraynuevo = itemsCart.concat(item)
+
+function checkitems(){
+    return console.log(itemsCart)
+}
+
+function addItem(item,ammount){
+    var arraynuevo=[]
+    for (let index = 0; index < ammount; index++) {
+        arraynuevo = arraynuevo.concat(item)
     }
-    SetitemsCart(arraynuevo)
-    
+    console.log(arraynuevo)
+    var newItemsCart = [...itemsCart,...arraynuevo]
+    setItemsCart(newItemsCart)
+    // console.log(itemsCart)
+    // setItemsCart([...itemsCart,item])
+    // console.log(itemsCart)
 }
 
 function clear () {
-    SetitemsCart([])    
+    setItemsCart([])    
+    console.log(itemsCart)
 }
 
 function removeItem (itemid) {
 
-    const arraynuevo = itemsCart.filter((item)=>{item.id !== itemid })
+    var arraynuevo = itemsCart.filter((item)=>item.id !== itemid )
 
-    SetitemsCart(arraynuevo)
+    setItemsCart(arraynuevo)
 
 }
 
-function isInCart (id) {
+// function isInCart (id) {
     
-    itemsCart.findIndex(item=>item.id == id)
-    ?true
-    :false
+//     itemsCart.findIndex(item=>item.id === id)
+//     ?true
+//     :false
 
-}
+// }
 
     return(
-        <CartContext.Provider value={{addItem,clear,removeItem,isInCart}}>
+        <CartContext.Provider value={{addItem,clear,checkitems,removeItem,itemsCart}}>
             {children}
         </CartContext.Provider>
     )
 
 }
+
+
+export default CartContextProvider

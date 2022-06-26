@@ -7,6 +7,7 @@ import NosotrosContainer from './component/NosotrosContainer';
 import ItemDetailContainer from './component/ItemDetailContainer';
 import NotFound from './component/NotFound';
 import Cart from './component/Cart'
+import CartContextProvider from './component/CartContext'
 import './css/App.css'
 import './css/ItemCount.css'
 
@@ -16,7 +17,8 @@ import './css/ItemCount.css'
 function App() {
   return  <>      
           <BrowserRouter>
-          <Header />
+          <CartContextProvider>
+            <Header />
             <Routes>
               <Route path="/" element={<Home />} /> 
               <Route path="/nosotros" element={ <NosotrosContainer />} />
@@ -25,6 +27,7 @@ function App() {
               <Route path='/cart' element={<Cart/>}/>
               <Route path='*' element={ <NotFound/>} />
             </Routes>
+            </CartContextProvider>
             <Footer />
           </BrowserRouter>
           </>

@@ -18,7 +18,7 @@ export const itemsPromise = (timeout) => {
 export const itemsPromiseid = (id,timeout) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(itemsDB.filter(item => item.id===2))
+            resolve(itemsDB.filter(item => item.id===id))
             reject ('error al obtener el item con id :'+id)
         }, timeout);
     })

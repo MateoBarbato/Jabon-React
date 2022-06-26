@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     const [spinner,setSpinner] = useState(false) 
     const [item,setItem] = useState({});
 
-    console.log(item)
+    // console.log(item)
 
     useEffect(()=>{
         setSpinner(true);
