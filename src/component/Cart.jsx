@@ -1,17 +1,29 @@
 import React from 'react'
-import {useContext} from 'react'
 import {CartContext} from './CartContext'
+import {useContext} from 'react'
+import ItemCart from './ItemCart'
 
 const Cart=()=>{
 
-    const {checkitems,clear,removeItem} = useContext(CartContext)
+    const {clear,itemsCart} = useContext(CartContext)
 
     
-return <><h1>Hola desde el Carrito</h1>
-        <button onClick={checkitems}>Hola ke hay?</button>
-        <button onClick={clear}>Borra to'</button>
-        button
-        </>
+return <>
+
+<article className='cartContainer'>
+{itemsCart.map(item=><ItemCart key={item.id}item={ item}/>)}
+
+
+<section className='buttonClear'>
+<button onClick={clear} className='button'>Borrar Todo</button>
+</section>
+</article>
+
+
+</>
+
+
+
 }
 
 export default Cart

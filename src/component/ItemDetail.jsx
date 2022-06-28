@@ -5,17 +5,23 @@ import {Link} from 'react-router-dom'
 import {CartContext} from './CartContext'
 
 const ItemDetail = ({item}) => {
-    const {name,precio,description,stock,initial,imageurl} = item
+    const {id,name,precio,description,stock,initial,imageurl} = item
 
     const [itemcount,setItemcount] = useState(true)
 
-    const {addItem} = useContext(CartContext)
+    const {addItem,isInCart} = useContext(CartContext)
 
     const onAdd = (valor,ammount)=>{
        
         setItemcount(valor)
-        // console.log(ammount,item)
-        addItem(item,ammount)
+        
+        if(isInCart(id)){
+            addItem(item,ammount)
+            
+        }else {
+            console.log('ya esta en el carrito')
+        }
+        // addItem(item,ammount)
     }
 
 

@@ -8,22 +8,16 @@ const CartContextProvider = ({children})=>{
 const [itemsCart,setItemsCart] = useState([]);
 
 
-function checkitems(){
-    return console.log(itemsCart)
+function ammountitems(){
+    var cantidaditems=itemsCart.length
+    return cantidaditems;
 }
 
 function addItem(item,ammount){
-    var arraynuevo=[]
-    for (let index = 0; index < ammount; index++) {
-        arraynuevo = arraynuevo.concat(item)
-    }
-    console.log(arraynuevo)
-    var newItemsCart = [...itemsCart,...arraynuevo]
+    item.ammount = ammount;
+    var newItemsCart = [...itemsCart,item]
     setItemsCart(newItemsCart)
-    // console.log(itemsCart)
-    // setItemsCart([...itemsCart,item])
-    // console.log(itemsCart)
-}
+}   
 
 function clear () {
     setItemsCart([])    
@@ -31,23 +25,24 @@ function clear () {
 }
 
 function removeItem (itemid) {
-
     var arraynuevo = itemsCart.filter((item)=>item.id !== itemid )
 
     setItemsCart(arraynuevo)
 
 }
 
-// function isInCart (id) {
+function isInCart (id) {
+     
+    if(itemsCart.find(item=>item.id === id)===undefined){
+        return true
+    }else {
+        return false
+    }
     
-//     itemsCart.findIndex(item=>item.id === id)
-//     ?true
-//     :false
-
-// }
+}
 
     return(
-        <CartContext.Provider value={{addItem,clear,checkitems,removeItem,itemsCart}}>
+        <CartContext.Provider value={{addItem,clear,removeItem,isInCart,itemsCart}}>
             {children}
         </CartContext.Provider>
     )
