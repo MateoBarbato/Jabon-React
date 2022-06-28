@@ -5,6 +5,16 @@
   
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+  }
+
 a{
   text-decoration: none;
   color: black;
@@ -179,16 +189,16 @@ nav ul li a{
 }
 
 .itemCart {
-  /* background-color: #61dafb; */
-  height: 5vh;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 20%);
   border-radius: 10px;
-  border: 1px solid #a7bcb95e;
+  /* border: 1px solid #a7bcb95e; */
+  border: 1px solid rgba(0, 0, 0, 0.267);
   transition: 500ms linear;
   background-color: white;
+  transition: 500ms ease;
  
 
 }
@@ -197,6 +207,7 @@ nav ul li a{
   box-shadow: 0px 10px 16px 0px rgb(0 0 0 / 20%), 0px 6px 20px 5px rgb(0 0 0 / 19%);
 background-color: white;
 transition: 500ms linear;
+transition: 500ms ease;
 }
 
 .itemCart .img{
@@ -204,6 +215,7 @@ transition: 500ms linear;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 500ms ease;
   
 }
 
@@ -217,6 +229,7 @@ transition: 500ms linear;
   justify-content: space-around;
   /* flex-direction: column; */
   align-items: center;
+  text-align: center;
  
 }
 
@@ -226,6 +239,8 @@ transition: 500ms linear;
   border-radius: 7px;
   border: grey 1px solid;
   text-align: center;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .buttonClear{
@@ -238,6 +253,7 @@ transition: 500ms linear;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 72px;
 }
 
 .buttonBorrarItem button {
@@ -245,6 +261,7 @@ transition: 500ms linear;
  font-size: 12px;
  border-radius: 5px;
  height: 2rem;
+ min-width: 72px;
 }
 /* ITEM CONTAINER ><><><><><><><><><><><><><><><><><><<><>><><><><><><><><><>>< */
 
@@ -661,6 +678,12 @@ text-decoration: underline 2px black;
     transition: 1s ease;
   
   }
+
+  .itemCart .img{
+    width: 20%;
+    transition: 500ms ease;
+    
+  }
 }
 
 @media all and (max-width: 550px) {
@@ -668,6 +691,19 @@ text-decoration: underline 2px black;
   header h1 {
     width: 15%;
     font-size: large;
+    transition: 700ms ease;
+  }
+
+  nav ul{
+    justify-content: right;
+  }
+
+  nav ul li {
+    margin-right: 2px;
+  }
+
+  nav ul li a{
+    font-size: 15px;
     transition: 700ms ease;
   }
   
@@ -692,18 +728,31 @@ text-decoration: underline 2px black;
     flex-direction: column;
   }
 
-  nav ul{
-    justify-content: right;
+  
+
+  .itemCartInfo{
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 5%;
+    transition: 500ms ease;
+  }
+  .cartAmmountInput {
+    width: 25%;
+    transition: 500ms ease;
+  
   }
 
-  nav ul li {
-    margin-right: 2px;
+  .itemCart .img{
+    width: 20%;   
+    transition: 500ms ease;
   }
+  
+  .itemCart .img img{
+    transition: 500ms ease;
+    width: 60%;
+  }
+  
 
-  nav ul li a{
-    font-size: 15px;
-    transition: 700ms ease;
-  }
 }
 
 
@@ -711,6 +760,10 @@ text-decoration: underline 2px black;
 
   nav {
     width: 65%;
+  }
+  
+  .itemCart .img {
+    display: none;
   }
 }
 

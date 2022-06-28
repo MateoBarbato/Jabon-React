@@ -20,7 +20,7 @@ return <>
         </div>
         <div className="itemCartInfo">
             <h4>{name}</h4>
-            <h4>{precio}$</h4>
+            <h4>{precio}</h4>
             <input className='cartAmmountInput' type="number" defaultValue={ammount} />
         </div>
         <div className="buttonBorrarItem">
