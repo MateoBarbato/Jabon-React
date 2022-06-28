@@ -1,7 +1,7 @@
  [
   {
     "id": 1,
-    "name": "Jabonardo",
+    "name": "Jabon de Limon",
     "type": "soapbar",
     "precio": "120$",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
@@ -11,9 +11,9 @@
   },
   {
     "id": 2,
-    "name": "Jabonardo",
+    "name": "Jabo de Rosas",
     "type": "soapbar",
-    "precio": "120$",
+    "precio": "80$",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
     "stock": 6,
     "initial": 1,
@@ -21,9 +21,9 @@
   },
   {
     "id": 3,
-    "name": "Liquid Soap",
+    "name": "Jabon Liquido",
     "type": "misc",
-    "precio": "120$",
+    "precio": "160$",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
     "stock": 5,
     "initial": 1,
@@ -31,9 +31,9 @@
   },
   {
     "id": 4,
-    "name": "Jabonardo",
+    "name": "Jabon de Coco",
     "type": "soapbar",
-    "precio": "120$",
+    "precio": "100$",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
     "stock": 7,
     "initial": 1,
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "name": "Liquid Soap",
+    "name": "Jabon Liquido",
     "type": "misc",
     "precio": "120$",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
@@ -51,7 +51,7 @@
   },
   {
     "id": 6,
-    "name": "Liquid Soap",
+    "name": "Jabon Liquido",
     "type": "misc",
     "precio": "120$",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
