@@ -167,6 +167,7 @@ nav ul li a{
   position: absolute;
   top: 40px;
   right: 100px;
+  color: white;
 
 }
 
@@ -183,7 +184,6 @@ nav ul li a{
 
 .cartContainerBackground{
   background-image: url('../background.svg');
- 
   background-size: cover;
   z-index: -1;
   height: 100%;
@@ -193,9 +193,8 @@ nav ul li a{
   min-height: 1000px;
 }
 
-/* .cartContainerBackground-black{
+.cartContainerBackground-black{
   background-image: url('../backgroundBLack.svg');
- 
   background-size: cover;
   z-index: -1;
   height: 100%;
@@ -203,7 +202,7 @@ nav ul li a{
   padding: 0%;
   margin: 0;
   min-height: 1000px;
-} */
+}
 
 .cartContainer{
   /* background-color: grey; */
@@ -226,7 +225,7 @@ nav ul li a{
   border: 1px solid rgba(0, 0, 0, 0.267);
   transition: 500ms linear;
   background-color: white;
-  transition: 500ms ease;
+  
  
 
 }
@@ -235,7 +234,7 @@ nav ul li a{
   box-shadow: 0px 10px 16px 0px rgb(0 0 0 / 20%), 0px 6px 20px 5px rgb(0 0 0 / 19%);
 background-color: white;
 transition: 500ms linear;
-transition: 500ms ease;
+
 }
 
 .itemCart .img{
@@ -271,9 +270,37 @@ transition: 500ms ease;
   margin: 0;
 }
 
+.cartInfo{
+  display: flex;
+  justify-content: right;  
+  align-items: center;
+  height: 5rem;
+  gap: 10rem;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 20%);
+  background-color: white;
+  border-radius: 7px;
+  transition: 500ms linear;
+}
+
+/* .cartInfo:hover{
+box-shadow: 0px 10px 16px 0px rgb(0 0 0 / 20%), 0px 6px 20px 5px rgb(0 0 0 / 19%);
+background-color: white;
+transition: 500ms linear;
+} */
+
+.cartPrice{
+  font-size: large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #36395A;
+  border-bottom: solid 1px black;
+
+}
+
 .buttonClear{
   display: flex;
   justify-content: right;
+  margin-right: 2rem;
 }
 
 .buttonBorrarItem{
@@ -409,6 +436,21 @@ transition: 500ms linear;
   min-height: 1000px;
   transition: 700ms ease;
   background-image: url('../background.svg');
+  background-size: cover;
+  z-index: -1;
+  
+}
+
+.detailContainer-black{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10%;
+  min-height: 1000px;
+  transition: 700ms ease;
+  background-image: url('../backgroundBLack.svg');
   background-size: cover;
   z-index: -1;
   

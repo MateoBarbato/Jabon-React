@@ -3,6 +3,7 @@ import ItemCount from './ItemCount'
 import {useState,useContext} from 'react'
 import {Link} from 'react-router-dom'
 import {CartContext} from './CartContext'
+import {ThemeContext} from './ThemeContext'
 
 const ItemDetail = ({item}) => {
     const {id,name,precio,description,stock,initial,imageurl} = item
@@ -10,6 +11,9 @@ const ItemDetail = ({item}) => {
     const [itemcount,setItemcount] = useState(true)
 
     const {addItem,addItemRepeated,isInCart} = useContext(CartContext)
+
+    const {theme} = useContext(ThemeContext)
+    const themecondition = theme?'detailContainer-black':'detailContainer';
 
     const onAdd = (valor,ammount)=>{
        
@@ -29,7 +33,7 @@ const ItemDetail = ({item}) => {
 
 
     return <>
-    <section className="detailContainer">
+    <section className={themecondition}>
         <article className="itemDetailContainer">
                     <div className="itemDetail">
                         <div className="itemDetailimg">

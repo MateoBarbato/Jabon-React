@@ -5,12 +5,16 @@ import Toggle from './Toggle';
 import {Link} from 'react-router-dom';
 import { useContext } from 'react'
 import {ThemeContext} from './ThemeContext'
+import {CartContext} from './CartContext'
 
 const Header = () =>{
 
 
     const {theme} = useContext(ThemeContext)
     const themecondition = theme?'header-dark':'header';
+
+    const {cartAmmount} = useContext(CartContext)
+      const condition = cartAmmount>0
 
     return <>
        
@@ -31,18 +35,17 @@ const Header = () =>{
     <nav>
         <ul >
           <li>
-          <Link to='/category/soapbar'>Jabones</Link>
+            <Link to='/category/soapbar'>Jabones</Link>
           </li>
           <li>
-          <Link to='/category/misc'>Miscelaneos</Link>
+            <Link to='/category/misc'>Miscelaneos</Link>
           </li>
           <li>
-            {/* <a href='/Nosotros' className='a-link-nav'>Nosotros</a> */}
             <Link to='/nosotros'>Nosotros</Link>
           </li>
-          <Toggle/>
         </ul>
-        <CartWidget/>
+        {condition&&<CartWidget cartAmmount={cartAmmount}/>}
+        <Toggle/>
     </nav>
   </header>
         

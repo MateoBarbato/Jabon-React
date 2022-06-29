@@ -7,23 +7,24 @@ const CartContextProvider = ({children})=>{
 
 const [itemsCart,setItemsCart] = useState([]);
 const [cartAmmount,setCartAmmount] = useState(0)
+const [totalprice,setTotalprice] = useState(0)
 
         useEffect (() => {
             var cantidad = 0;
+            var precio = 0;
             console.log('cambio itemscart')
             
             itemsCart.forEach(element => {
                 cantidad = cantidad+element.ammount
             });
+            itemsCart.forEach(element =>{
+                precio = precio +parseFloat(element.precio)
+            })
 
             setCartAmmount(cantidad)
+            setTotalprice(precio)
         }, [itemsCart])
 
-
-// function ammountitems(){
-//     var cantidaditems=itemsCart.length
-//     setCartAmmount(cantidaditems)
-// }
 
 function checkitems(){
    return console.log(itemsCart)
@@ -39,10 +40,10 @@ function addItemRepeated(item,ammount){
     var itemtoedit = itemsCart.find(itemarr=>itemarr.id===item.id)
     var prevammount = item.ammount;
     itemtoedit.ammount = ammount+prevammount
-    var arraynuevo = itemsCart.filter((item)=>item.id !== item.id )
+    var arrayfiltrado = itemsCart.filter((itemarr)=>itemarr.id !== item.id )
     
     
-    setItemsCart([...arraynuevo,itemtoedit])
+    setItemsCart([...arrayfiltrado,itemtoedit])
 
     
 }
@@ -69,7 +70,7 @@ function isInCart (id) {
 }
 
     return(
-        <CartContext.Provider value={{addItem,clear,checkitems,removeItem,isInCart,addItemRepeated,itemsCart,cartAmmount}}>
+        <CartContext.Provider value={{addItem,clear,checkitems,removeItem,isInCart,addItemRepeated,itemsCart,cartAmmount,totalprice}}>
             {children}
         </CartContext.Provider>
     )
