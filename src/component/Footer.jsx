@@ -1,9 +1,16 @@
 import React from 'react'
+import { useContext } from 'react'
+import {ThemeContext} from './ThemeContext'
 
 const Footer=()=> {
 
+  const {theme} = useContext(ThemeContext)
+  const themecondition = theme?'footer-theme-dark':'footer-theme';
+
     return (
+      <div className={themecondition}>
       <footer >
+       
         <ul>
           <li>
             <a href="/">Twitter</a>
@@ -21,6 +28,7 @@ const Footer=()=> {
         </div>
         
       </footer>
+      </div>
     )
 
 }

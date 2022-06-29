@@ -8,8 +8,10 @@ import ItemDetailContainer from './component/ItemDetailContainer';
 import NotFound from './component/NotFound';
 import Cart from './component/Cart'
 import CartContextProvider from './component/CartContext'
+import ThemeContextProvider from './component/ThemeContext';
 import './css/App.css'
 import './css/ItemCount.css'
+import './css/Toggle.css'
 
 
 
@@ -17,6 +19,7 @@ import './css/ItemCount.css'
 function App() {
   return  <>      
           <BrowserRouter>
+          <ThemeContextProvider>
           <CartContextProvider>
             <Header />
             <Routes>
@@ -29,6 +32,7 @@ function App() {
             </Routes>
             </CartContextProvider>
             <Footer />
+            </ThemeContextProvider>
           </BrowserRouter>
           </>
 }

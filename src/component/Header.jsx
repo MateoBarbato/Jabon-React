@@ -1,16 +1,20 @@
 import React from 'react';
 import image from '../soap.png'
 import CartWidget from './CartWidget'
+import Toggle from './Toggle';
 import {Link} from 'react-router-dom';
+import { useContext } from 'react'
+import {ThemeContext} from './ThemeContext'
 
 const Header = () =>{
-// PUEDO EJECUTAR JAVASCRIPT ACA    
 
 
+    const {theme} = useContext(ThemeContext)
+    const themecondition = theme?'header-dark':'header';
 
     return <>
        
-        <header>
+      <header className={themecondition}>
         
     <div className='brand-container'>
         <div className='name-logo-container'>
@@ -36,6 +40,7 @@ const Header = () =>{
             {/* <a href='/Nosotros' className='a-link-nav'>Nosotros</a> */}
             <Link to='/nosotros'>Nosotros</Link>
           </li>
+          <Toggle/>
         </ul>
         <CartWidget/>
     </nav>
