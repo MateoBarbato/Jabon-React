@@ -9,7 +9,7 @@ const ItemDetail = ({item}) => {
 
     const [itemcount,setItemcount] = useState(true)
 
-    const {addItem,isInCart} = useContext(CartContext)
+    const {addItem,addItemRepeated,isInCart} = useContext(CartContext)
 
     const onAdd = (valor,ammount)=>{
        
@@ -19,7 +19,8 @@ const ItemDetail = ({item}) => {
             addItem(item,ammount)
             
         }else {
-            console.log('ya esta en el carrito')
+            console.log(item)
+            addItemRepeated(item,ammount)
         }
         // addItem(item,ammount)
     }

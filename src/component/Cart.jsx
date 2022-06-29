@@ -19,7 +19,7 @@ return <>
 <div className="cartContainerBackground">
     <article className='cartContainer'>
     
-    {itemsCart.map(item=><ItemCart key={item.id}item={ item}/>)}
+    {itemsCart.map(item=><ItemCart key={item.id} item={item}/>)}
         
     <section className='buttonClear'>
         <button onClick={clear} className='button'>Borrar Todo</button>
