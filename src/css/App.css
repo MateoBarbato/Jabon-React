@@ -5,6 +5,10 @@
   
 }
 
+html, body {
+  height:100%;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -334,6 +338,7 @@ transition: 500ms linear;
   margin: 0;
   min-height: 1000px;
   transition: 1s ease;
+  
 }
 
 .itemlistbackground-dark{
@@ -356,7 +361,8 @@ transition: 500ms linear;
   gap: 5vh;
   margin: 0vh auto;
   padding: 5vh 0;
-  width: 80%; 
+  width: 80%;
+  
 
 }
 
@@ -628,6 +634,7 @@ footer h4 a {
   padding: 5% 0;
 }
 
+
 .notFoundContainer h2{
   font-size: 32px;
   font-family: 'Oswald', sans-serif;
@@ -713,9 +720,25 @@ text-decoration: underline 2px black;
 }
 }
 
-/* @media all and (max-width :1080px){
- 
-} */
+@media all and (min-height :1080px){
+  .itemlistbackground-light{
+    max-height: 100vh;
+  }
+
+  .itemlistbackground-dark{
+    max-height: 100vh;
+  }
+
+  .cartContainerBackground{
+    max-height: 100vh;
+  }
+
+  .cartContainerBackground-black{
+    max-height: 100vh;
+  }
+
+}
+
 
 @media all and (max-width: 980px) {
   .logo-div{
@@ -742,6 +765,7 @@ text-decoration: underline 2px black;
   .itemcount{
     flex-direction: column;
   }
+
 
   .notFoundContainer div img{
     width: 75%;
