@@ -3,7 +3,9 @@ import {useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 import Loading from './Loading'
-import {itemsPromiseid} from './itemsPromise'
+// import {itemsPromiseid} from './itemsPromise'
+import {doc,getDoc,getFirestore} from 'firebase/firestore'
+
 
 
 const ItemDetailContainer = () => {
@@ -15,8 +17,12 @@ const ItemDetailContainer = () => {
 
     useEffect(()=>{
         setSpinner(true);
-        itemsPromiseid(parseFloat(id),2000)
-        .then(item=>{setItem(item[0])})
+        const db = getFirestore();
+
+        const itembyid = doc(db,'items',id)
+        getDoc(itembyid).then((snapshot)=>{
+            if(snapshot.exists())
+            {setItem({id:snapshot.id,...snapshot.data()})}})
         .catch(error=>{console.log(error)})
         .finally(()=>{setSpinner(false)})
     },[id])

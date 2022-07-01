@@ -18,7 +18,8 @@ const [totalprice,setTotalprice] = useState(0)
                 cantidad = cantidad+element.ammount
             });
             itemsCart.forEach(element =>{
-                precio = precio +parseFloat(element.precio)
+                precio = precio +(element.precio)*(element.ammount)
+
             })
 
             setCartAmmount(cantidad)
