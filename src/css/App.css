@@ -193,6 +193,7 @@ nav ul li a{
   padding: 0%;
   margin: 0;
   min-height: 1000px;
+  transition: 1s ease;
 }
 
 .cartContainerBackground-black{
@@ -204,6 +205,7 @@ nav ul li a{
   padding: 0%;
   margin: 0;
   min-height: 1000px;
+  transition: 1s ease;
 }
 
 .cartContainer{
@@ -336,7 +338,7 @@ transition: 500ms linear;
 
 .itemlistbackground-dark{
   /* background-color: #000000ea; */
-  background-color: #0f0f0f;
+  background-color: #202020;
   background-image: url('../backgroundBLack.svg');
   background-size: cover;
   z-index: 1;
