@@ -76,6 +76,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  transition: 1s ease;
 }
 
 .header-dark{
@@ -85,6 +86,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  transition: 1s ease;
 }
 
 .brand-container{
@@ -329,6 +331,7 @@ transition: 500ms linear;
   padding: 0%;
   margin: 0;
   min-height: 1000px;
+  transition: 1s ease;
 }
 
 .itemlistbackground-dark{
@@ -342,6 +345,7 @@ transition: 500ms linear;
   padding: 0%;
   margin: 0;
   min-height: 1000px;
+  transition: 500ms ease;
 }
 
 .itemlistcontainer{
@@ -413,7 +417,6 @@ transition: 500ms linear;
 .stock{
   width: 100%;
   border-radius:0 0 25px 25px ;
-  /* background-color: #DADADA; */
   border-top: 2px #a7bcb98c solid;
   margin-top: 2%;
 }
@@ -558,10 +561,12 @@ footer{
 
 .footer-theme{
   background-color: #113f67;
+  transition: 1s ease;
 }
 
 .footer-theme-dark {
   background-color: #0f0f0ff1;
+  transition: 1s ease;
 }
 footer ul{
   display: flex;
