@@ -4,8 +4,8 @@ import {useParams} from 'react-router-dom'
 import ItemDetail from './ItemDetail'
 import Loading from './Loading'
 // import {itemsPromiseid} from './itemsPromise'
-import {doc,getDoc,getFirestore} from 'firebase/firestore'
-
+import {doc,getDoc} from 'firebase/firestore'
+import {database} from '../firebase'
 
 
 const ItemDetailContainer = () => {
@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
 
     useEffect(()=>{
         setSpinner(true);
-        const db = getFirestore();
+        const db = database
 
         const itembyid = doc(db,'items',id)
         getDoc(itembyid).then((snapshot)=>{

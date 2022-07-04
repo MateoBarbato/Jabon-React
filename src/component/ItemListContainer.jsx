@@ -3,8 +3,8 @@ import Loading from './Loading'
 import ItemList from './ItemList';
 import {useState} from 'react'
 import { useParams } from 'react-router-dom'
-import {collection,getDocs,getFirestore,query,where} from 'firebase/firestore'
-
+import {collection,getDocs,query,where} from 'firebase/firestore'
+import {database} from '../firebase'
 
 const ItemListContainer = ()=>{
         
@@ -23,7 +23,7 @@ useEffect(()=>{
 },[type])
 
 useEffect(()=>{
-    const db = getFirestore();
+    const db = database;
     setSpinner(true)
     const itemsCollection = collection(db,'items')
 
