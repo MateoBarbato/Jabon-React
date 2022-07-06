@@ -13,10 +13,6 @@ const [itemsarr,setItems] = useState()
 const [filter,setFilter] = useState("")
 const {type} = useParams()
 
-// const filteritems = itemsarray=>{
-//     return itemsarray.filter(item=>item.type === filter) 
-    
-// }
 
 useEffect(()=>{
     setFilter(type || "")

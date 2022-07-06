@@ -32,7 +32,7 @@ const ItemDetail = ({item}) => {
 
 
 
-    return <>
+    return (
     <section className={themecondition}>
         <article className="itemDetailContainer">
                     <div className="itemDetail">
@@ -57,7 +57,7 @@ const ItemDetail = ({item}) => {
                     </div>
         </article>
     </section>
-    </>
+    )
 }
 
 
