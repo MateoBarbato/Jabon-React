@@ -326,6 +326,64 @@ transition: 500ms linear;
  height: 2rem;
  min-width: 72px;
 }
+
+.cartformcontainer{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  /* padding: 5% 5%; */
+  height: 10rem;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 20%);
+  background-color: white;
+  border-radius: 7px;
+  transition: 500ms linear;
+  padding: 2% 0;
+}
+
+.cartform-form{
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartform-form input {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 2rem;
+}
+
+.cart-muestra-id-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+  background: url('../background.svg');
+  background-size: cover;
+  z-index: -1;
+}
+
+.cart-muestra-id-container .button {
+  margin-top: 2rem;
+}
+
+.cart-muestra-id{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 20%);
+  background-color: white;
+  border-radius: 7px;
+  transition: 500ms linear;
+  height: 5vh;
+  width: 80%;
+}
 /* ITEM CONTAINER ><><><><><><><><><><><><><><><><><><<><>><><><><><><><><><>>< */
 
 .itemlistbackground-light{
