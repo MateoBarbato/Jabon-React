@@ -5,6 +5,8 @@ import {doc,getDoc} from 'firebase/firestore'
 import {database} from '../firebase'
 import Loading from './Loading'
 import OrderDetailItem from './OrderDetailItem'
+import {useContext} from 'react'
+import {ThemeContext} from './ThemeContext'
 
 const OrderDetail = ()=>{
 
@@ -16,6 +18,9 @@ const [buyer,setBuyer] = useState()
 
 const conditionitems = items!==undefined
 const conditionbuyer = buyer!==undefined
+
+const {theme} = useContext(ThemeContext)
+const themecondition = theme?'orderDetail-dark':'orderDetail';
 
 useEffect(()=>{
     setSpinner(true);
@@ -38,7 +43,7 @@ useEffect(()=>{
 return (
     spinner
     ? <Loading/> 
-    :<article className='orderDetail'>
+    :<article className={themecondition}>
         <h2>Tu orden de Compra y tus datos son:</h2>
         {conditionitems?Object.keys(items).map((key,index)=>{
             return <OrderDetailItem key={index} items={items[key]}/>

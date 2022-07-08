@@ -192,7 +192,7 @@ nav ul li a{
   background-image: url('../background.svg');
   background-size: cover;
   z-index: -1;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0%;
   margin: 0;
@@ -204,7 +204,7 @@ nav ul li a{
   background-image: url('../backgroundBLack.svg');
   background-size: cover;
   z-index: -1;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0%;
   margin: 0;
@@ -339,7 +339,17 @@ transition: 500ms linear;
   border-radius: 7px;
   transition: 500ms linear;
   padding: 2% 0;
+  flex-direction: column;
 }
+
+.form-errors{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+}
+
+
 
 .cartform-form{
   color: black;
@@ -364,6 +374,18 @@ transition: 500ms linear;
   height: 100vh;
   flex-direction: column;
   background: url('../background.svg');
+  background-size: cover;
+  z-index: -1;
+}
+
+.cart-muestra-id-container-dark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  flex-direction: column;
+  background: url('../backgroundBLack.svg');
   background-size: cover;
   z-index: -1;
 }
@@ -414,9 +436,32 @@ transition: 500ms linear;
   min-height: 100vh;
   padding: 2% 0;
   gap: 2rem;
+  background-image: url('../background.svg');
+  background-size: cover;
+  z-index: 1;
+
+}
+
+.orderDetail-dark{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2% 0;
+  gap: 2rem;
+  background-image: url('../backgroundBLack.svg');
+  background-size: cover;
+  z-index: 1;
 }
 
 .orderDetail .itemCart{
+  height: 10vh;
+  width: 50%;
+  
+}
+
+.orderDetail-dark .itemCart{
   height: 10vh;
   width: 50%;
   
@@ -442,7 +487,7 @@ transition: 500ms linear;
   background-image: url('../background.svg');
   background-size: cover;
   z-index: -1;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0%;
   margin: 0;
@@ -452,12 +497,12 @@ transition: 500ms linear;
 }
 
 .itemlistbackground-dark{
-  /* background-color: #000000ea; */
-  background-color: #202020;
+  background-color: white;
+  /* background-color: #202020; */
   background-image: url('../backgroundBLack.svg');
   background-size: cover;
   z-index: 1;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 0%;
   margin: 0;
@@ -554,7 +599,7 @@ transition: 500ms linear;
   justify-content: center;
   width: 100%;
   padding: 0 10%;
-  min-height: 1000px;
+  min-height: 100vh;
   transition: 700ms ease;
   background-image: url('../background.svg');
   background-size: cover;
@@ -667,6 +712,71 @@ padding: 0 3%;
   text-align: center;
   font-weight: 600;
 }
+
+.nosotros{
+  min-height: 100vh;
+  background-image: url('../background.svg');
+  background-size: cover;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.nosotros-black{
+  min-height: 100vh;
+  background-image: url('../backgroundBLack.svg');
+  background-size: cover;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.card {
+  min-height: 60vh;
+  border-radius: 10px;
+  box-shadow: -5px 10px 16px 0px rgb(0 0 0 / 20%), 5px 6px 20px 5px rgb(0 0 0 / 19%);
+  background-color: rgb(255, 255, 255);
+  max-width:150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-imagescontainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.card-imagescontainer .img{
+ width: 50%;
+ margin-top: 20px;
+}
+
+.card-imagescontainer .img img{
+ width: 100%;
+ /* max-height: px; */
+}
+
+.card-text{
+  padding-block: 5rem ;
+  width: 75%;
+  
+}
+
+.card-text h2 {
+  
+  font-weight: 600;
+  color: #07080ad7;
+  padding: 1% 0;
+  }
 
 footer{
   display: grid;
@@ -918,12 +1028,17 @@ text-decoration: underline 2px black;
 
   .cartformcontainer{
     height: 25vh;
+    flex-direction: row;
   }
 
   .cartform-form{
     flex-direction: column;
+    width: 40%;
     
   }
+
+    
+  
 
   .cartInfo{
     gap: 2rem;
@@ -933,6 +1048,8 @@ text-decoration: underline 2px black;
     height: 15vh;
     
   }
+
+  
 }
 
 @media all and (max-width: 550px) {

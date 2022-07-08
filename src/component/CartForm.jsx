@@ -4,19 +4,34 @@ import { useForm } from "react-hook-form";
 
 const CartForm = ({onSubmit})=>{
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,formState:{errors}} = useForm();
     
     return <>
       <section className='cartformcontainer'>
         <form className='cartform-form' onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("firstName",{required:true})} defaultValue={'Name'} />
-        <input {...register("email",{required:true})} defaultValue={"mynameis@email.com"} />
-        <input {...register("tel",{required:true})} defaultValue={"11-412-1**"}/>
+        <div className="form-errors">
+        <input {...register("firstName",{required:true})} placeholder={'Name'} />
+        {errors.firstName && <p>Name field is required</p>}
+        </div>
+        <div className="form-errors">
+        <input {...register("email",{required:true})}  placeholder={"mynameis@email.com"}/>
+        {errors.email && <p>Email field is required</p>}
+        </div>
+        <div className="form-errors">
+        <input {...register("tel",{required:true})} placeholder={"11-412-1**"}/>
+        {errors.tel && <p>Tel field is required</p>}
+        </div>
         <input type="submit" />
         </form>
+       
+        
+        
+        
+       
       </section>
      </>
 }
+// defaultValue
 
 
 export default CartForm
