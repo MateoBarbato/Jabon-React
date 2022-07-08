@@ -1,9 +1,7 @@
 import React from 'react'
 
-const OrderDetailItem = ({item})=>{
-
-    console.log(item)
-const {name,precio,ammount}=item
+const OrderDetailItem = ({items})=>{
+const {name,precio,ammount}=items
 
 return<>
     <section className="itemCart">

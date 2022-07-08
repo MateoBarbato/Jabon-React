@@ -12,7 +12,7 @@ const OrderID = ({id})=>{
         <h4 className='cart-muestra-id'>Tu numero de Orden De Compra es : {id}</h4>
         <div className="cart-muestra-links">
             <Link className="button" to='/'>Volver al Home</Link>
-            {/* <Link className="button" to={`/orderID/${id}`}>Ver datos de mi Orden</Link> */}
+            <Link className="button" to={`/orderID/${id}`}>Ver datos de mi Orden</Link>
         </div>
     </section>
 </article>

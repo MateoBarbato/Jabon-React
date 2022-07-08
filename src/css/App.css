@@ -360,6 +360,7 @@ transition: 500ms linear;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100vh;
   flex-direction: column;
   background: url('../background.svg');
@@ -403,6 +404,37 @@ transition: 500ms linear;
   transition: 500ms linear;
   height: 5vh;
   width: 40%;
+}
+
+.orderDetail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2% 0;
+  gap: 2rem;
+}
+
+.orderDetail .itemCart{
+  height: 10vh;
+  width: 50%;
+  
+}
+
+.orderDetailCard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 6px 12px 2px rgb(0 0 0 / 20%);
+  border-radius: 10px;
+  /* border: 1px solid #a7bcb95e; */
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  transition: 500ms linear;
+  background-color: white;
+  width: 50%;
+  height: 10vh;
+
 }
 /* ITEM CONTAINER ><><><><><><><><><><><><><><><><><><<><>><><><><><><><><><>>< */
 
