@@ -23,10 +23,10 @@ const ItemDetail = ({item}) => {
             addItem(item,ammount)
             
         }else {
-            console.log(item)
+            console.log(ammount)
             addItemRepeated(item,ammount)
         }
-        // addItem(item,ammount)
+        
     }
 
 

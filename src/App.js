@@ -10,6 +10,7 @@ import Cart from './component/Cart'
 import CartContextProvider from './component/CartContext'
 import ThemeContextProvider from './component/ThemeContext';
 import CartForm from './component/CartForm';
+import OrderDetail from './component/OrderDetail';
 import './css/App.css'
 import './css/ItemCount.css'
 import './css/Toggle.css'
@@ -30,6 +31,7 @@ function App() {
               <Route path='/category/:type' element={ <Home />} />   
               <Route path='/cart' element={<Cart/>}/>
               <Route path='/cartForm' element={<CartForm/>}/>
+              <Route path='/orderID/:id' element={<OrderDetail/>}/>
               <Route path='*' element={ <NotFound/>} />
             </Routes>
             </CartContextProvider>

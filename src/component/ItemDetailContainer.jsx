@@ -12,9 +12,7 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
     const [spinner,setSpinner] = useState(false) 
     const [item,setItem] = useState({});
-
-    // console.log(item)
-
+    
     useEffect(()=>{
         setSpinner(true);
         const db = database
@@ -28,11 +26,13 @@ const ItemDetailContainer = () => {
     },[id])
 
 
-    return <>
-       {spinner 
+    return (<>
+    
+        {spinner 
         ? <Loading/> 
         : <ItemDetail item={item}/>}
-    </>
+        </>
+    )
 }
 
 export default ItemDetailContainer;

@@ -25,7 +25,7 @@ const ItemCount= ({stock,initial,onAdd})=>{
         e.stopPropagation()
         // lo guardo para saber la cantidad de productos que se pidieron, despues supongo que lo usaremos para el carrito
         var ammount = number;
-
+        
         onAdd(false,ammount)
     }
 

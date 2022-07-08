@@ -12,8 +12,6 @@ const [totalprice,setTotalprice] = useState(0)
         useEffect (() => {
             var cantidad = 0;
             var precio = 0;
-            console.log('cambio itemscart')
-            
             itemsCart.forEach(element => {
                 cantidad = cantidad+element.ammount
             });
@@ -37,13 +35,12 @@ function addItem(item,ammount){
     setItemsCart(newItemsCart)
 }   
 
-function addItemRepeated(item,ammount){
+function addItemRepeated(item,ammountofitems){
     var itemtoedit = itemsCart.find(itemarr=>itemarr.id===item.id)
-    var prevammount = item.ammount;
-    itemtoedit.ammount = ammount+prevammount
+    var prevammount = itemtoedit.ammount;
+    itemtoedit.ammount = prevammount+ammountofitems
     var arrayfiltrado = itemsCart.filter((itemarr)=>itemarr.id !== item.id )
-    
-    
+
     setItemsCart([...arrayfiltrado,itemtoedit])
 
     

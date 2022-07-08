@@ -4,63 +4,77 @@ import {useContext} from 'react'
 import {ThemeContext} from './ThemeContext'
 import ItemCart from './ItemCart'
 import EmptyCart from './EmptyCart'
-import {Link} from 'react-router-dom';
-import { useForm } from "react-hook-form";
 import { useState } from 'react';
 import CartForm from './CartForm'
+import OrderID from './OrderID'
+import {collection,addDoc} from 'firebase/firestore'
+import {database} from '../firebase'
 
 
 const Cart=()=>{
-    
-    
-const onSubmit = (data)=>{
-        setForm(false)
-        console.log(data)
-    }
-
       
 const [form, setForm] = useState(true);
-const [item,setItem]= useState('Id no encontrado')
+const [itemid,setItemid]= useState('Id no encontrado')
 
 
 const {clear,itemsCart,totalprice} = useContext(CartContext)
 const condition = itemsCart.length===0
 
-console.log(totalprice)
 
 const {theme} = useContext(ThemeContext)
 const themecondition = theme?'cartContainerBackground-black':'cartContainerBackground';
+
+const onSubmitCart = (data)=>{
+        const db = database
+        
+        var total = totalprice
+        var currentdate=new Date();
+        var datetime = currentdate.getDate() + "/"
+        + (currentdate.getMonth()+1)  + "/" 
+        + currentdate.getFullYear() + " @ "  
+        + currentdate.getHours() + ":"  
+        + currentdate.getMinutes() + ":" 
+        + currentdate.getSeconds();
+
+        const order = {
+            buyer:{...data},
+            items:{...itemsCart},
+            datetime,
+            total
+        };
+        const ordersCollection = collection(db,'orders') 
+        addDoc(ordersCollection,order)
+        .then(({id})=>setItemid(id))
+        .catch('Hubo un error en el añadir un nuevo producto')
+        .finally(()=>{
+            setForm(false)
+        })
+        // console.log({buyer:{...data},items:{...itemsCart},datetime,total})
+    }
 
     
 return <>
 
 {condition
 ?<EmptyCart/>
-:form?<div className={themecondition}>
+:form
+?<div className={themecondition}>
 <article className='cartContainer'>
 
 {itemsCart.map(item=><ItemCart key={item.id} item={item}/>)}
     
 <section className='cartInfo'>
-<div className="cartPrice">
-    <p>Precio total:{totalprice}</p>
-</div>
-<div className="button"><Link to={"/cartform"}>Siguiente Paso</Link></div>
-<div className='buttonClear'>
-    <button onClick={clear} className='button'>Borrar Todo</button>
-</div>
+    <div className="cartPrice">
+        <p>Precio total:{totalprice}</p>
+    </div>
+    <div className='buttonClear'>
+        <button onClick={clear} className='button'>Borrar Todo</button>
+    </div>
 </section>
-<CartForm onSubmit={onSubmit}/>
+<CartForm onSubmit={onSubmitCart}/>
 </article>
 </div>
-:<article>
-    <section className='cart-muestra-id-container'>
-        <h3 className='cart-muestra-id'>Tu numero de Orden De Compra es : {item}</h3>
-        <div className="button">
-            <Link to='/'>Volver al Home</Link>
-        </div>
-    </section>
-</article>
+:<OrderID key={itemid} id={itemid}/>
 }
 
 </>
