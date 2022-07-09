@@ -68,7 +68,7 @@ function isInCart (id) {
 }
 
     return(
-        <CartContext.Provider value={{addItem,clear,checkitems,removeItem,isInCart,addItemRepeated,itemsCart,cartAmmount,totalprice}}>
+        <CartContext.Provider value={{addItem,clear,checkitems,removeItem,isInCart,addItemRepeated,itemsCart,cartAmmount,totalprice,setTotalprice}}>
             {children}
         </CartContext.Provider>
     )

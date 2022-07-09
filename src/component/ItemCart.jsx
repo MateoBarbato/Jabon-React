@@ -5,8 +5,9 @@ import {useContext} from 'react'
 
 
 const ItemCart = (item)=>{
-const {id,imageurl,ammount,precio,name} = item.item
+const {id,imageurl,ammount,precio,name,stock} = item.item
 const {removeItem} = useContext(CartContext)
+
 
 function handleRemove(){
    
@@ -21,13 +22,12 @@ return <>
         <div className="itemCartInfo">
             <h4>{name}</h4>
             <h4>Precio por Unidad: {precio}</h4>
-            <input className='cartAmmountInput' type="number" defaultValue={ammount} />
+            <input className='cartAmmountInput' type="number" min={1} max={stock} 
+            value={ammount} />
         </div>
         <div className="buttonBorrarItem">
         <button className='button' onClick={handleRemove}>Borrar item</button>
         </div>
-       
-        
         </section>
         
 </>

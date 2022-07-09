@@ -7,6 +7,7 @@ import Loading from './Loading'
 import OrderDetailItem from './OrderDetailItem'
 import {useContext} from 'react'
 import {ThemeContext} from './ThemeContext'
+import { Link } from "react-router-dom"
 
 const OrderDetail = ()=>{
 
@@ -48,15 +49,22 @@ return (
         {conditionitems?Object.keys(items).map((key,index)=>{
             return <OrderDetailItem key={index} items={items[key]}/>
         })
-        :<h4>No encontramos tu orden, porfavor itentalo denuevo</h4>
+        :<h4>No encontramos tu orden. Porfavor itentalo denuevo</h4>
         }
         {conditionbuyer?
+        <>
         <section className='orderDetailCard'>
         <h4>{buyer.tel}</h4>
         <h4>{buyer.email}</h4>
         <h4>{buyer.firstName}</h4>
         </section>
-        :<h4>No se econtraron tus datos. Porfavor vuelve a intentarlo</h4>
+        <Link className={'button'} to={"/"}>Volver al inicio</Link>
+        </>
+        :<>
+        <h4>No se econtraron tus datos. Porfavor vuelve a intentarlo</h4>
+        <Link className={'button'} to={"/"}>Volver al inicio</Link>
+        </>
+        
         }
     </article>
 )

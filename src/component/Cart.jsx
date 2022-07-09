@@ -58,7 +58,9 @@ return <>
 {condition
 ?<EmptyCart/>
 :form
-?<div className={themecondition}>
+?
+
+<div className={themecondition}>
 <article className='cartContainer'>
 
 {itemsCart.map(item=><ItemCart key={item.id} item={item}/>)}
@@ -76,6 +78,25 @@ return <>
 </div>
 :<OrderID key={itemid} id={itemid}/>
 }
+
+{/* {form
+?<div className={themecondition}>
+<article className='cartContainer'>
+
+{itemsCart.map(item=><ItemCart key={item.id} item={item}/>)}
+    
+<section className='cartInfo'>
+    <div className="cartPrice">
+        <p>Precio total:{totalprice}</p>
+    </div>
+    <div className='buttonClear'>
+        <button onClick={clear} className='button'>Borrar Todo</button>
+    </div>
+</section>
+<CartForm onSubmit={onSubmitCart}/>
+</article>
+</div>
+:<OrderID key={itemid} id={itemid}/>} */}
 
 </>
 
