@@ -4,6 +4,7 @@ import Home from './component/Home';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import NosotrosContainer from './component/NosotrosContainer';
+import NosotrosMejorado from './component/NosotrosMejorado';
 import ItemDetailContainer from './component/ItemDetailContainer';
 import NotFound from './component/NotFound';
 import Cart from './component/Cart'
@@ -26,7 +27,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} /> 
-              <Route path="/nosotros" element={ <NosotrosContainer />} />
+              <Route path="/nosotros" element={ <NosotrosMejorado />} />
               <Route path='/item/:id' element={ <ItemDetailContainer/>} />
               <Route path='/category/:type' element={ <Home />} />   
               <Route path='/cart' element={<Cart/>}/>

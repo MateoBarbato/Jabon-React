@@ -41,17 +41,6 @@ a{
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -81,6 +70,7 @@ body {
   align-items: center;
   height: 10vh;
   transition: 1s ease;
+  text-shadow: 2px 3px rgba(138, 136, 136, 0.26);
 }
 
 .header-dark{
@@ -733,6 +723,69 @@ padding: 0 3%;
   justify-content: center;
   align-items: center;
   padding: 50px;
+}
+
+.canvas {
+  min-height: 101vh;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family:Helvetica;
+}
+
+.canvas .text {
+  width: 40%;
+  /* background-color: rgb(3 4 6 / 94%); */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  position: absolute;
+  top: -15%;
+  left: 5%;
+  user-select: none;
+  gap: 2rem;
+}
+
+.creditos{
+color: white;
+font-size: medium;
+height: 20px;
+width: 250px;
+position: absolute;
+bottom: 2%;
+right:1%;
+}
+
+.text {
+  color: white;
+  /* font-family: 'Staatliches'; */
+  letter-spacing: 1px;
+  font-size: 35px;
+  padding-left: 20px;
+
+  
+}
+
+.text>h2 , .text>p{
+  text-shadow: 2px 2px #f5f3f34b;
+  
+}
+
+.text p {
+  font-size: 25px;
+  text-align: left;
+  width: 65vh;
+  
+  
+}
+
+.canvas iframe{
+  height: 101vh;
+  width: 100%;
+  
 }
 
 .card {
