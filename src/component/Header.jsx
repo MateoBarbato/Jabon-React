@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../soap.png'
+import image from '../assets/soap.png'
 import CartWidget from './CartWidget'
 import Toggle from './Toggle';
 import {Link} from 'react-router-dom';

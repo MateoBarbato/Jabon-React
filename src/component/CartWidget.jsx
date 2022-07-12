@@ -1,5 +1,5 @@
 import React from 'react'
-import cartlogo from '../carrito.png'
+import cartlogo from '../assets/carrito.png'
 import { Link } from 'react-router-dom'
 
 

@@ -9,10 +9,8 @@ const ThemeContextProvider = ({children})=>{
 
     function changeTheme() {
         if(theme===false){
-            console.log('negro wey')
             setTheme(true)
         }else if(theme ===true){
-            console.log('blanco wey')
             setTheme(false)
         }
     }
