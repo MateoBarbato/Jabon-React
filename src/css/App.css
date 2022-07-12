@@ -72,7 +72,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 20%;
   transition: 1s ease;
   text-shadow: 2px 3px rgba(138, 136, 136, 0.26);
 }
@@ -113,6 +113,7 @@ color: #e7eaf6;
 
 .logo-div img {
   width:100%;
+  padding: 10%;
 }
 
 nav{
@@ -647,7 +648,7 @@ padding: 0 3%;
 }
 
 .canvas {
-  min-height: 101vh;
+  min-height: 101%;
    display: flex;
   justify-content: center;
   align-items: center;
@@ -657,16 +658,16 @@ padding: 0 3%;
 
 .canvas .text {
   width: 40%;
-  height: 100vh;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
   position: absolute;
-  top: -15%;
+  top: 5%;
   left: 5%;
   user-select: none;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .creditos{
@@ -848,7 +849,9 @@ text-decoration: underline 2px black;
 
 
 /* RESPONSIVE */
-@media all and (min-width: 1900px) {
+
+
+@media all and (min-width: 1900px ) {
   .logo-div{
     width: 15%;
     transition: 700ms ease;
@@ -923,13 +926,30 @@ text-decoration: underline 2px black;
   }
 
   .cartContainerBackground{
-    max-height: 100vh;
+    max-height: 100%;
   }
 
   .cartContainerBackground-black{
-    max-height: 100vh;
+    max-height: 100%;
   }
 
+}
+
+@media all and (max-height:900px){
+  .logo-div{
+    padding: 5px;
+    width: 15%;
+    transition: 700ms ease;
+    
+  }
+}
+
+@media all and (max-height:600px){
+  .logo-div{
+    width: 12%;
+    transition: 700ms ease;
+    
+  }
 }
 
 
