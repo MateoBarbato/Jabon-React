@@ -72,7 +72,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20%;
+  /* height: 25%; */
+  height: 10vh;
   transition: 1s ease;
   text-shadow: 2px 3px rgba(138, 136, 136, 0.26);
 }
