@@ -1,25 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react'
 import image from '../assets/soap.png'
 import CartWidget from './CartWidget'
-import Toggle from './Toggle';
-import {Link} from 'react-router-dom';
-import { useContext } from 'react'
-import {ThemeContext} from './ThemeContext'
-import {CartContext} from './CartContext'
+import Toggle from './Toggle'
+import { Link } from 'react-router-dom'
 
-const Header = () =>{
+import { ThemeContext } from './ThemeContext'
+import { CartContext } from './CartContext'
 
+const Header = () => {
+  const { theme } = useContext(ThemeContext)
+  const themecondition = theme ? 'header-dark' : 'header'
 
-    const {theme} = useContext(ThemeContext)
-    const themecondition = theme?'header-dark':'header';
+  const { cartAmmount } = useContext(CartContext)
+  const condition = cartAmmount > 0
 
-    const {cartAmmount} = useContext(CartContext)
-      const condition = cartAmmount>0
+  return <>
 
-    return <>
-       
       <header className={themecondition}>
-        
+
     <div className='brand-container'>
         <div className='name-logo-container'>
         <Link to='/'>
@@ -44,13 +42,12 @@ const Header = () =>{
             <Link to='/nosotros'>Nosotros</Link>
           </li>
         </ul>
-        {condition&&<CartWidget cartAmmount={cartAmmount}/>}
+        {condition && <CartWidget cartAmmount={cartAmmount}/>}
         <Toggle/>
     </nav>
   </header>
-        
-      
+
   </>
 }
 
-export default Header;
+export default Header

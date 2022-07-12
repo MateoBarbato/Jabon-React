@@ -1,79 +1,69 @@
-import { useState,useEffect } from "react";
-import { createContext } from "react";
 
-export const CartContext = createContext();
+import { React, useState, useEffect, createContext } from 'react'
 
-const CartContextProvider = ({children})=>{
+export const CartContext = createContext()
 
-const [itemsCart,setItemsCart] = useState([]);
-const [cartAmmount,setCartAmmount] = useState(0)
-const [totalprice,setTotalprice] = useState(0)
+const CartContextProvider = ({ children }) => {
+  const [itemsCart, setItemsCart] = useState([])
+  const [cartAmmount, setCartAmmount] = useState(0)
+  const [totalprice, setTotalprice] = useState(0)
 
-        useEffect (() => {
-            var cantidad = 0;
-            var precio = 0;
-            itemsCart.forEach(element => {
-                cantidad = cantidad+element.ammount
-            });
-            itemsCart.forEach(element =>{
-                precio = precio +(element.precio)*(element.ammount)
+  useEffect(() => {
+    let cantidad = 0
+    let precio = 0
+    itemsCart.forEach(element => {
+      cantidad = cantidad + element.ammount
+    })
+    itemsCart.forEach(element => {
+      precio = precio + (element.precio) * (element.ammount)
+    })
 
-            })
+    setCartAmmount(cantidad)
+    setTotalprice(precio)
+  }, [itemsCart])
 
-            setCartAmmount(cantidad)
-            setTotalprice(precio)
-        }, [itemsCart])
+  function checkitems () {
+    return console.log(itemsCart)
+  }
 
-
-function checkitems(){
-   return console.log(itemsCart)
-}
-
-function addItem(item,ammount){
-    item.ammount = ammount;
-    var newItemsCart = [...itemsCart,item]
+  function addItem (item, ammount) {
+    item.ammount = ammount
+    const newItemsCart = [...itemsCart, item]
     setItemsCart(newItemsCart)
-}   
+  }
 
-function addItemRepeated(item,ammountofitems){
-    var itemtoedit = itemsCart.find(itemarr=>itemarr.id===item.id)
-    var prevammount = itemtoedit.ammount;
-    itemtoedit.ammount = prevammount+ammountofitems
-    var arrayfiltrado = itemsCart.filter((itemarr)=>itemarr.id !== item.id )
+  function addItemRepeated (item, ammountofitems) {
+    const itemtoedit = itemsCart.find(itemarr => itemarr.id === item.id)
+    const prevammount = itemtoedit.ammount
+    itemtoedit.ammount = prevammount + ammountofitems
+    const arrayfiltrado = itemsCart.filter((itemarr) => itemarr.id !== item.id)
 
-    setItemsCart([...arrayfiltrado,itemtoedit])
+    setItemsCart([...arrayfiltrado, itemtoedit])
+  }
 
-    
-}
+  function clear () {
+    setItemsCart([])
+  }
 
-function clear () {
-    setItemsCart([])    
-}
-
-function removeItem (itemid) {
-    var arraynuevo = itemsCart.filter((item)=>item.id !== itemid )
+  function removeItem (itemid) {
+    const arraynuevo = itemsCart.filter((item) => item.id !== itemid)
 
     setItemsCart(arraynuevo)
+  }
 
-}
-
-function isInCart (id) {
-     
-    if(itemsCart.find(item=>item.id === id)===undefined){
-        return true
-    }else {
-        return false
+  function isInCart (id) {
+    if (itemsCart.find(item => item.id === id) === undefined) {
+      return true
+    } else {
+      return false
     }
-    
-}
+  }
 
-    return(
-        <CartContext.Provider value={{addItem,clear,checkitems,removeItem,isInCart,addItemRepeated,itemsCart,cartAmmount,totalprice,setTotalprice}}>
+  return (
+        <CartContext.Provider value={{ addItem, clear, checkitems, removeItem, isInCart, addItemRepeated, itemsCart, cartAmmount, totalprice, setTotalprice }}>
             {children}
         </CartContext.Provider>
-    )
-
+  )
 }
-
 
 export default CartContextProvider

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const OrderDetailItem = ({items})=>{
-const {name,precio,ammount}=items
+const OrderDetailItem = ({ items }) => {
+  const { name, precio, ammount } = items
 
-return<>
+  return <>
     <section className="itemCart">
         <div className="itemCartInfo">
             <h4>{name}</h4>

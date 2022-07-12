@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './component/Home'
 import Header from './component/Header'
 import Footer from './component/Footer'
-import NosotrosContainer from './component/NosotrosContainer'
 import NosotrosMejorado from './component/NosotrosMejorado'
 import ItemDetailContainer from './component/ItemDetailContainer'
 import NotFound from './component/NotFound'
@@ -17,7 +16,7 @@ import './css/ItemCount.css'
 import './css/Toggle.css'
 
 // PREGUNTAR DONDE VA EXACTAMENTE EL HEADER Y FOOTER
-function App() {
+function App () {
   return (
     <>
       <BrowserRouter>
@@ -26,7 +25,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/nosotros" element={<NosotrosMejorado />} />
+              <Route path="/nosotros" element={<NosotrosMejorado/>} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/category/:type" element={<Home />} />
               <Route path="/cart" element={<Cart />} />

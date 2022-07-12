@@ -1,38 +1,32 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import ItemCount from './ItemCount'
-import {useState,useContext} from 'react'
-import {Link} from 'react-router-dom'
-import {CartContext} from './CartContext'
-import {ThemeContext} from './ThemeContext'
 
-const ItemDetail = ({item}) => {
-    const {id,name,precio,description,stock,initial,imageurl} = item
+import { Link } from 'react-router-dom'
+import { CartContext } from './CartContext'
+import { ThemeContext } from './ThemeContext'
 
-    const [itemcount,setItemcount] = useState(true)
+const ItemDetail = ({ item }) => {
+  const { id, name, precio, description, stock, initial, imageurl } = item
 
-    const {addItem,addItemRepeated,isInCart} = useContext(CartContext)
+  const [itemcount, setItemcount] = useState(true)
 
-    const {theme} = useContext(ThemeContext)
-    const themecondition = theme?'detailContainer-black':'detailContainer';
+  const { addItem, addItemRepeated, isInCart } = useContext(CartContext)
 
-    const onAdd = (valor,ammount)=>{
-       
-        setItemcount(valor)
-        
-        if(isInCart(id)){
-            addItem(item,ammount)
-            
-        }else {
-            console.log(ammount)
-            addItemRepeated(item,ammount)
-        }
-        
+  const { theme } = useContext(ThemeContext)
+  const themecondition = theme ? 'detailContainer-black' : 'detailContainer'
+
+  const onAdd = (valor, ammount) => {
+    setItemcount(valor)
+
+    if (isInCart(id)) {
+      addItem(item, ammount)
+    } else {
+      console.log(ammount)
+      addItemRepeated(item, ammount)
     }
+  }
 
-
-
-
-    return (
+  return (
     <section className={themecondition}>
         <article className="itemDetailContainer">
                     <div className="itemDetail">
@@ -48,17 +42,16 @@ const ItemDetail = ({item}) => {
                             <div className='itemDetail_info_precio'>
                             <p>{precio}</p>
                             {itemcount
-                            ?<ItemCount initial={initial} stock={stock} onAdd={onAdd} />
-                            :<Link to='/cart'><button className='button'>Terminar mi compra</button></Link>}
-                            
+                              ? <ItemCount initial={initial} stock={stock} onAdd={onAdd} />
+                              : <Link to='/cart'><button className='button'>Terminar mi compra</button></Link>}
+
                             </div>
-                        
+
                         </div>
                     </div>
         </article>
     </section>
-    )
+  )
 }
-
 
 export default ItemDetail

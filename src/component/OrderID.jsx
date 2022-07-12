@@ -1,16 +1,15 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { useContext } from 'react'
-import {ThemeContext} from './ThemeContext'
-import {CartContext} from './CartContext'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 
-const OrderID = ({id})=>{
+import { ThemeContext } from './ThemeContext'
+import { CartContext } from './CartContext'
 
-    const {clear} = useContext(CartContext)
-    const {theme} = useContext(ThemeContext)
-    const themecondition = theme?'cart-muestra-id-container-dark':'cart-muestra-id-container';
+const OrderID = ({ id }) => {
+  const { clear } = useContext(CartContext)
+  const { theme } = useContext(ThemeContext)
+  const themecondition = theme ? 'cart-muestra-id-container-dark' : 'cart-muestra-id-container'
 
-    return <article>
+  return <article>
     <section className={themecondition}>
         <div className="cart-muestra-gracias">
         <img src="https://i.postimg.cc/FHN7NsM7/5594935.png" alt="A happy Shopping Bag" />

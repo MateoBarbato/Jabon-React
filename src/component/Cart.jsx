@@ -1,70 +1,63 @@
-import React from 'react'
-import {CartContext} from './CartContext'
-import {useContext} from 'react'
-import {ThemeContext} from './ThemeContext'
+import React, { useContext, useState } from 'react'
+import { CartContext } from './CartContext'
+
+import { ThemeContext } from './ThemeContext'
 import ItemCart from './ItemCart'
 import EmptyCart from './EmptyCart'
-import { useState } from 'react';
+
 import CartForm from './CartForm'
 import OrderID from './OrderID'
-import {collection,addDoc} from 'firebase/firestore'
-import {database} from '../firebase'
+import { collection, addDoc } from 'firebase/firestore'
+import { database } from '../firebase'
 
+const Cart = () => {
+  const [form, setForm] = useState(true)
+  const [itemid, setItemid] = useState('Id no encontrado')
 
-const Cart=()=>{
-      
-const [form, setForm] = useState(true);
-const [itemid,setItemid]= useState('Id no encontrado')
+  const { clear, itemsCart, totalprice } = useContext(CartContext)
+  const condition = itemsCart.length === 0
 
+  const { theme } = useContext(ThemeContext)
+  const themecondition = theme ? 'cartContainerBackground-black' : 'cartContainerBackground'
 
-const {clear,itemsCart,totalprice} = useContext(CartContext)
-const condition = itemsCart.length===0
+  const onSubmitCart = (data) => {
+    const db = database
 
+    const total = totalprice
+    const currentdate = new Date()
+    const datetime = currentdate.getDate() + '/' +
+        (currentdate.getMonth() + 1) + '/' +
+        currentdate.getFullYear() + ' @ ' +
+        currentdate.getHours() + ':' +
+        currentdate.getMinutes() + ':' +
+        currentdate.getSeconds()
 
-const {theme} = useContext(ThemeContext)
-const themecondition = theme?'cartContainerBackground-black':'cartContainerBackground';
-
-const onSubmitCart = (data)=>{
-        const db = database
-        
-        var total = totalprice
-        var currentdate=new Date();
-        var datetime = currentdate.getDate() + "/"
-        + (currentdate.getMonth()+1)  + "/" 
-        + currentdate.getFullYear() + " @ "  
-        + currentdate.getHours() + ":"  
-        + currentdate.getMinutes() + ":" 
-        + currentdate.getSeconds();
-
-        const order = {
-            buyer:{...data},
-            items:{...itemsCart},
-            datetime,
-            total
-        };
-        const ordersCollection = collection(db,'orders') 
-        addDoc(ordersCollection,order)
-        .then(({id})=>setItemid(id))
-        .catch('Hubo un error en el añadir un nuevo producto')
-        .finally(()=>{
-            setForm(false)
-        })
-        // console.log({buyer:{...data},items:{...itemsCart},datetime,total})
+    const order = {
+      buyer: { ...data },
+      items: { ...itemsCart },
+      datetime,
+      total
     }
+    const ordersCollection = collection(db, 'orders')
+    addDoc(ordersCollection, order)
+      .then(({ id }) => setItemid(id))
+      .catch('Hubo un error en el añadir un nuevo producto')
+      .finally(() => {
+        setForm(false)
+      })
+    // console.log({buyer:{...data},items:{...itemsCart},datetime,total})
+  }
 
-    
-return <>
+  return <>
 
 {condition
-?<EmptyCart/>
-:form
-?
-
-<div className={themecondition}>
+  ? <EmptyCart/>
+  : form
+    ? <div className={themecondition}>
 <article className='cartContainer'>
 
-{itemsCart.map(item=><ItemCart key={item.id} item={item}/>)}
-    
+{itemsCart.map(item => <ItemCart key={item.id} item={item}/>)}
+
 <section className='cartInfo'>
     <div className="cartPrice">
         <p>Precio total:{totalprice}</p>
@@ -76,7 +69,7 @@ return <>
 <CartForm onSubmit={onSubmitCart}/>
 </article>
 </div>
-:<OrderID key={itemid} id={itemid}/>
+    : <OrderID key={itemid} id={itemid}/>
 }
 
 {/* {form
@@ -84,7 +77,7 @@ return <>
 <article className='cartContainer'>
 
 {itemsCart.map(item=><ItemCart key={item.id} item={item}/>)}
-    
+
 <section className='cartInfo'>
     <div className="cartPrice">
         <p>Precio total:{totalprice}</p>
@@ -99,7 +92,6 @@ return <>
 :<OrderID key={itemid} id={itemid}/>} */}
 
 </>
-
 }
 
 export default Cart

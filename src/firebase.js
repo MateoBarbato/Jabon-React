@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: 'jaboon-barbato',
   storageBucket: 'jaboon-barbato.appspot.com',
   messagingSenderId: '951310403520',
-  appId: '1:951310403520:web:2c0906792a3daf1c72aa25',
+  appId: '1:951310403520:web:2c0906792a3daf1c72aa25'
 }
 
 const firebaseApp = initializeApp(firebaseConfig)

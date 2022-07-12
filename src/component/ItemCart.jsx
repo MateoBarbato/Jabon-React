@@ -1,20 +1,15 @@
-import React from 'react'
-import {CartContext} from './CartContext'
-import {useContext} from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from './CartContext'
 
+const ItemCart = (item) => {
+  const { id, imageurl, ammount, precio, name } = item.item
+  const { removeItem } = useContext(CartContext)
 
-
-const ItemCart = (item)=>{
-const {id,imageurl,ammount,precio,name} = item.item
-const {removeItem} = useContext(CartContext)
-
-
-function handleRemove(){
-   
+  function handleRemove () {
     removeItem(id)
-}
+  }
 
-return <>
+  return <>
         <section className="itemCart">
         <div className="img">
             <img src={imageurl} alt="imagen de muestra del item" />
@@ -29,10 +24,8 @@ return <>
         <button className='button' onClick={handleRemove}>Borrar item</button>
         </div>
         </section>
-        
+
 </>
-
-
 }
 
-export default ItemCart;
+export default ItemCart
