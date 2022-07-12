@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import image from '../assets/soap.png'
 import CartWidget from './CartWidget'
 import Toggle from './Toggle'
 import { Link } from 'react-router-dom'
@@ -26,7 +25,7 @@ const Header = () => {
         </h1>
         </Link>
           <div className='logo-div'>
-          <img src={image} alt="Logo de la pagina, un dispensador de jabon y espuma." />
+          <img src={'https://i.postimg.cc/5ycDrF4S/soap.png'} alt="Logo de la pagina, un dispensador de jabon y espuma." />
           </div>
         </div>
     </div>
