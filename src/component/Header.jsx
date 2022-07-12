@@ -1,25 +1,18 @@
-import React, { useContext } from 'react'
-import CartWidget from './CartWidget'
-import Toggle from './Toggle'
+import { useContext, React } from 'react'
 import { Link } from 'react-router-dom'
-
 import { ThemeContext } from './ThemeContext'
-import { CartContext } from './CartContext'
+import NavBar from './NavBar'
 
 const Header = () => {
   const { theme } = useContext(ThemeContext)
   const themecondition = theme ? 'header-dark' : 'header'
 
-  const { cartAmmount } = useContext(CartContext)
-  const condition = cartAmmount > 0
-
   return <>
 
       <header className={themecondition}>
-
-    <div className='brand-container'>
+        <div className='brand-container'>
         <div className='name-logo-container'>
-        <Link to='/'>
+        <Link to='/' >
         <h1>
           Jaboon
         </h1>
@@ -29,21 +22,7 @@ const Header = () => {
           </div>
         </div>
     </div>
-    <nav>
-        <ul >
-          <li>
-            <Link to='/category/soapbar'>Jabones</Link>
-          </li>
-          <li>
-            <Link to='/category/misc'>Miscelaneos</Link>
-          </li>
-          <li>
-            <Link to='/nosotros'>Nosotros</Link>
-          </li>
-        </ul>
-        {condition && <CartWidget cartAmmount={cartAmmount}/>}
-        <Toggle/>
-    </nav>
+    <NavBar/>
   </header>
 
   </>
