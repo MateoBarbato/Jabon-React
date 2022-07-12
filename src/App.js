@@ -25,7 +25,7 @@ function App () {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/nosotros" element={<NosotrosMejorado/>} />
+              <Route path="/nosotros" element={<NosotrosMejorado />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/category/:type" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
