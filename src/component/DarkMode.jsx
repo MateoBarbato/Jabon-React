@@ -3,7 +3,7 @@ import '../css/Toggle.css'
 
 import { ThemeContext } from './ThemeContext'
 
-const Toggle = () => {
+const DarkMode = () => {
   const { changeTheme } = useContext(ThemeContext)
 
   return (
@@ -14,4 +14,4 @@ const Toggle = () => {
   )
 }
 
-export default Toggle
+export default DarkMode

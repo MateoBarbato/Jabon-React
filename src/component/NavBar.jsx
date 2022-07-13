@@ -1,7 +1,7 @@
 import { React, useContext } from 'react'
 import { CartContext } from './CartContext'
 import CartWidget from './CartWidget'
-import Toggle from './Toggle'
+import DarkMode from './DarkMode'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
@@ -10,17 +10,17 @@ const NavBar = () => {
   return (<nav>
             <ul >
             <li>
-                <NavLink to='/category/soapbar'>Jabones</NavLink>
+                <NavLink to={'/category/soapbar'}>Jabones</NavLink>
             </li>
             <li>
-                <NavLink to='category/misc'>Miscelaneos</NavLink>
+                <NavLink to={'/category/misc'}>Miscelaneos</NavLink>
             </li>
             <li>
-                <NavLink to='/nosotros'>Nosotros</NavLink>
+                <NavLink to={'/nosotros'}>Nosotros</NavLink>
             </li>
             </ul>
             {condition && <CartWidget cartAmmount={cartAmmount}/>}
-            <Toggle/>
+            <DarkMode/>
     </nav>
   )
 }
