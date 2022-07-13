@@ -46,7 +46,7 @@ body {
   /* height: 25%; */
   height: 10vh;
   transition: 1s ease;
- text-shadow: 2px 3px rgba(138, 136, 136, 0.26);
+  text-shadow: 2px 3px rgba(138, 136, 136, 0.26);
 }
 
 .header-dark {
@@ -54,7 +54,7 @@ body {
 }
 
 .active {
-  text-decoration: underline 2px white;
+  text-decoration: underline 10% white;
   text-underline-offset: 5px;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.356);
 }
