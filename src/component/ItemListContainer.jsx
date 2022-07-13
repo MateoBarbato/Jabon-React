@@ -47,11 +47,3 @@ const ItemListContainer = () => {
         </>
 }
 export default ItemListContainer
-
-// useEffect(() => {
-//     setSpinner(true)
-//     itemsPromise(2000).then(itemsarr=>
-//         {setItems(filter !== "" ? filteritems(itemsarr) : itemsarr)})
-//     .catch(error=>{console.log(error)})
-//     .finally(()=>{setSpinner(false)})
-//     },[filter]);

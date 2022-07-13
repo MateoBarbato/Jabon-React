@@ -21,7 +21,6 @@ const ItemDetail = ({ item }) => {
     if (isInCart(id)) {
       addItem(item, ammount)
     } else {
-      console.log(ammount)
       addItemRepeated(item, ammount)
     }
   }

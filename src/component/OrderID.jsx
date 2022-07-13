@@ -1,11 +1,8 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-
 import { ThemeContext } from './ThemeContext'
-import { CartContext } from './CartContext'
 
 const OrderID = ({ id }) => {
-  const { clear } = useContext(CartContext)
   const { theme } = useContext(ThemeContext)
   const themecondition = theme ? 'cart-muestra-id-container-dark' : 'cart-muestra-id-container'
 
@@ -17,8 +14,8 @@ const OrderID = ({ id }) => {
         </div>
         <h4 className='cart-muestra-id'>Tu numero de Orden De Compra es : {id}</h4>
         <div className="cart-muestra-links">
-            <Link className="button" to='/' onClick={clear}>Volver al Home</Link>
-            <Link className="button" to={`/orderID/${id}`} onClick={clear}>Ver datos de mi Orden</Link>
+            <Link className="button" to='/'>Volver al Home</Link>
+            <Link className="button" to={`/orderID/${id}`} >Ver datos de mi Orden</Link>
         </div>
     </section>
 </article>

@@ -42,6 +42,7 @@ const CartContextProvider = ({ children }) => {
   }
 
   function clear () {
+    console.log('from cart')
     setItemsCart([])
   }
 
