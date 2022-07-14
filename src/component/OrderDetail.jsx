@@ -53,9 +53,9 @@ const OrderDetail = () => {
         {conditionbuyer
           ? <>
         <section className='orderDetailCard'>
-        <h4>{buyer.tel}</h4>
-        <h4>{buyer.email}</h4>
-        <h4>{buyer.firstName}</h4>
+        <p>{buyer.tel}</p>
+        <p>{buyer.email}</p>
+        <p>{buyer.firstName}</p>
         </section>
         <Link className={'button'} to={'/'}>Volver al inicio</Link>
         </>

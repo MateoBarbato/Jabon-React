@@ -9,6 +9,11 @@
   margin: 0;
 }
 
+p {
+  word-break: break-all;
+  white-space: normal;
+}
+
 html,
 body {
   height: 100%;
@@ -43,8 +48,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 25%; */
-  height: 10vh;
+  min-height: 5rem;
+  max-height: 10rem;
   transition: 1s ease;
   text-shadow: 2px 3px rgba(138, 136, 136, 0.26);
 }
@@ -104,7 +109,6 @@ nav ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 5vh;
   align-items: center;
   transition: 700ms ease;
   width: 75%;
@@ -210,7 +214,7 @@ nav ul li a {
 }
 
 .itemCartInfo {
-  width: 50%;
+  width: 80%;
   display: flex;
   justify-content: space-around;
   /* flex-direction: column; */
@@ -373,13 +377,14 @@ nav ul li a {
   background-image: var(--background-light);
   background-size: cover;
   z-index: 1;
+  text-overflow: ellipsis
 }
 
 .orderDetail-dark {
   background-image: var(--background-dark);
 }
 
-.orderDetail-dark h2 {
+.orderDetail-dark h2{
   color: white;
 }
 
@@ -403,6 +408,9 @@ nav ul li a {
   width: 50%;
   height: 10vh;
   font-size: large;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 600;
+
 }
 /* ITEM CONTAINER ><><><><><><><><><><><><><><><><><><<><>><><><><><><><><><>>< */
 
@@ -416,7 +424,7 @@ nav ul li a {
   padding: 0%;
   margin: 0;
   transition: 1s ease;
-  min-height: 1000px;
+  min-height: 100vh;
 }
 
 .itemlistbackground-dark {
@@ -605,45 +613,18 @@ nav ul li a {
 
 
 /* NOSOTROS STYLE */
-.nosotros,
-.nosotros-black {
-  min-height: 100vh;
-  background-image: var(--background-light);
-  background-size: cover;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-
-.nosotros-black {
-  background-image: var(--background-dark);
-}
 
 .canvas {
-  min-height: 101%;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
   font-family: Helvetica;
+  /* border: 1px solid white; */
 }
-
-.canvas .text {
-  width: 40%;
-  height: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  flex-direction: column;
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  user-select: none;
-  gap: 3rem;
-}
-
 .creditos {
   color: white;
   font-size: medium;
@@ -654,11 +635,26 @@ nav ul li a {
   right: 1%;
 }
 
+.canvas .text {
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  user-select: none;
+  gap: 1rem;
+}
+
+
+
 .text {
   color: white;
   letter-spacing: 1px;
   font-size: 35px;
-  padding-left: 20px;
 }
 
 .text > h2,
@@ -680,23 +676,23 @@ nav ul li a {
 /* CONTACT FORM EN NOSOTROS */
 
 .email-form-container {
-  border-radius: 10px;
-  /* background: ; */
-  min-height: 30vh;
-  max-width: 60%;
+  background: rgb(19, 19, 19);
+  color: white;
+  min-height: 90vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-self: center;
-  align-items: center;
+  align-items: left;
   gap: 2rem;
   font-size: large;
-  padding: 30px;
+  padding: 10px 0px;
   text-shadow: 2px 2px #f5f3f34b;
   text-align: left;
 }
 
 .email-form-container h2, .email-form-container h4 {
-  width: 100%;
+  width: 75%;
   text-align: left;
 }
 
@@ -704,7 +700,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   min-height: 20vh;
-  width: 100%;
+  width: 75%;
 }
 
 .email-form-container form input, .email-form-container form button {
@@ -715,6 +711,7 @@ nav ul li a {
   padding: 10px;
 }
 .email-form-container form textarea{
+  height: 40px;
   margin-top: 1em;
   border: 2px solid rgba(93, 89, 89, 0.711);
   border-radius: 10px;
@@ -760,7 +757,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1vh;
-  height: 10vh;
+  height: 5rem;
   justify-content: center;
 }
 
@@ -872,12 +869,7 @@ footer h4 a {
   }
 }
 
-@media all and (max-width: 1500px) {
-  .itemlistcontainer {
-    grid-template-columns: repeat(3, 1fr);
-    transition: 700ms ease;
-  }
-}
+
 
 @media all and (min-height: 1080px) {
   .itemlistbackground-light {
@@ -894,6 +886,13 @@ footer h4 a {
 
   .cartContainerBackground-black {
     max-height: 100%;
+  }
+}
+
+@media all and (max-width: 1500px) {
+  .itemlistcontainer {
+    grid-template-columns: repeat(3, 1fr);
+    transition: 700ms ease;
   }
 }
 
@@ -926,11 +925,14 @@ footer h4 a {
     width: 78%;
   }
 
+  .itemDetailContainer {
+    margin: 15% 0;
+  }
+
   .itemDetail {
     display: flex;
     flex-direction: column;
-    gap: 4vh;
-    padding: 5% 3%;
+    gap: 1vh;
   }
 
   .itemcount {
@@ -951,7 +953,8 @@ footer h4 a {
   }
 }
 
-@media all and (max-width: 742px) {
+
+@media all and (max-width: 750px) {
   .logo-div {
     width: 35%;
 
@@ -969,6 +972,32 @@ footer h4 a {
   .itemlistcontainer h2 {
     font-size: 2rem;
     transition: 1s ease;
+  }
+
+  .orderDetail .itemCart ,.orderDetail-dark .itemCart{
+    height: 20vh;
+  }
+
+  .orderDetail .itemCartInfo, .orderDetailCard, .orderDetail-dark .itemCartInfo{
+    flex-direction: column;
+    height: 20vh;
+    width: 80%;
+    
+  }
+
+  .orderDetailCard{
+    width: 50%;
+    padding: 0 2%;
+  }
+
+  .orderDetailCard h4{
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+  }
+
+  .orderDetail .cartAmmountInput, .orderDetail-dark .cartAmmountInput {
+    width: 2rem;
   }
 
   .itemCart .img {
@@ -996,18 +1025,23 @@ footer h4 a {
 
 @media all and (max-width: 550px) {
   .header h1 {
-    width: 15%;
+    width: 25%;
     font-size: large;
     transition: 700ms ease;
+  }
+
+  nav {
+    width: 100%;
   }
 
   nav ul {
     justify-content: right;
     margin-right: 20px;
+    gap: 0.5rem;
   }
 
   nav ul li {
-    margin-right: 2px;
+    margin-right: 6px;
   }
 
   nav ul li a {
@@ -1060,6 +1094,10 @@ footer h4 a {
 @media all and (max-width: 330px) {
   nav {
     width: 65%;
+  }
+
+  nav ul {
+    flex-direction: column;
   }
 
   .itemCart .img {
