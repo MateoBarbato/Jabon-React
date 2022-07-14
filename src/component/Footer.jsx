@@ -24,7 +24,7 @@ const Footer = () => {
         <div className='footer-div-marca'>
         <h4 >Jaboon Company ©</h4>
         <h4>
-          <Link to= {'/'}>Barbatomateo@gmail.com</Link>
+          <Link to= {'/contact'}>Barbatomateo@gmail.com</Link>
         </h4>
         </div>
 

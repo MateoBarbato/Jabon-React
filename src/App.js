@@ -11,6 +11,7 @@ import CartContextProvider from './component/CartContext'
 import ThemeContextProvider from './component/ThemeContext'
 import CartForm from './component/CartForm'
 import OrderDetail from './component/OrderDetail'
+import EmailContact from './component/EmailContact'
 import './css/App.css'
 import './css/ItemCount.css'
 import './css/Toggle.css'
@@ -31,6 +32,7 @@ function App () {
               <Route path="/cart" element={<Cart />} />
               <Route path="/cartForm" element={<CartForm />} />
               <Route path="/orderID/:id" element={<OrderDetail />} />
+              <Route path="/contact" element={<EmailContact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </CartContextProvider>
