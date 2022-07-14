@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-
+import { Link } from 'react-router-dom'
 import { ThemeContext } from './ThemeContext'
 
 const Footer = () => {
@@ -12,18 +12,20 @@ const Footer = () => {
 
         <ul>
           <li>
-            <a href="/">Twitter</a>
+           <Link to= {'/'}>Twitter</Link>
           </li>
           <li>
-            <a href="/">Instagram</a>
+            <Link to= {'/'}>Instagram</Link>
           </li>
           <li>
-            <a href="/">WhatsApp</a>
+            <Link to= {'/'}>WhatsApp</Link>
           </li>
         </ul>
         <div className='footer-div-marca'>
         <h4 >Jaboon Company ©</h4>
-        <h4><a href="/">Barbatomateo@gmail.com</a></h4>
+        <h4>
+          <Link to= {'/'}>Barbatomateo@gmail.com</Link>
+        </h4>
         </div>
 
       </footer>
