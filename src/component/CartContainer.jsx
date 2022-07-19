@@ -14,7 +14,6 @@ const CartContainer = () => {
   const emptycart = itemsCart.length === 0
 
   const onSubmitCart = (data) => {
-    console.log('hola')
     const db = database
     const total = totalprice
     const currentdate = new Date()

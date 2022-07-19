@@ -255,7 +255,8 @@ nav ul li a {
   width: 8%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 25px;
   min-width: 72px;
 }
 
@@ -268,7 +269,8 @@ nav ul li a {
 }
 
 .cartformcontainer {
-  height: 15vh;
+  min-height: 15vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,6 +289,7 @@ nav ul li a {
   align-items: center;
   gap: 1rem;
 }
+
 .cartform-form {
   color: black;
   display: flex;
@@ -300,6 +303,7 @@ nav ul li a {
   border: 1px solid grey;
   border-radius: 5px;
   height: 2rem;
+  text-indent: 5px;
 }
 
 .cart-muestra-id-container,
@@ -1034,6 +1038,7 @@ footer h4 a {
     flex-direction: column;
     width: 40%;
   }
+
   .cartInfo {
     gap: 2rem;
     flex-direction: column;
