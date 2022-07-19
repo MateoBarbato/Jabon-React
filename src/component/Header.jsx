@@ -1,15 +1,16 @@
 import { useContext, React } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { ThemeContext } from './ThemeContext'
 import NavBar from './NavBar'
-
 const Header = () => {
   const { theme } = useContext(ThemeContext)
+  const { pathname } = useLocation()
+  // Se usa pathname para poder acceder a las propiedades de un background fijo solo en la ruta '/nosotros'
   const themecondition = theme ? 'header-dark' : 'header'
 
   return <>
 
-      <header className={themecondition}>
+      <header className={themecondition} style={{ position: pathname === '/nosotros' ? 'fixed' : 'static' }}>
         <div className='brand-container'>
         <div className='name-logo-container'>
         <NavLink to='/'>
