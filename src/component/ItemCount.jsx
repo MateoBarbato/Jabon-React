@@ -6,7 +6,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const [number, setNumber] = useState(initial)
 
   const num0 = number === 0
-  const numMax = number === stock
+  const numMax = number === stock || stock === 0
+  const outStock = stock === 0
 
   const increase = () => {
     if (number < stock) {
@@ -28,20 +29,30 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   }
 
   return <>
-        <div className='itemcount'>
-             <div className='contador'>
-             {num0
-               ? <button disabled className='disabled' onClick={() => { decrease() }}>-</button>
-               : <button className='button' onClick={() => { decrease() }}>-</button>}
-             <h5>{number}</h5>
-             {numMax
-               ? <button disabled className='disabled' onClick={() => { increase() }}>+</button>
-               : <button className='button' onClick={() => { increase() }}>+</button>}
-             </div>
-             {num0
-               ? <button disabled className='disabled' >Agregar al carrito</button>
-               : <button className='button' onClick={handleItemcount}>Agregar al carrito</button>}
-        </div>
+        {outStock
+          ? <div className='itemcount'>
+                <div className='contador  disabled'>
+                  <button disabled className='disabled' onClick={() => { decrease() }}>-</button>
+                  <h5>{stock}</h5>
+                  <button disabled className='disabled' onClick={() => { increase() }}>+</button>
+                </div>
+                <button disabled className='disabled' >Out of stock</button>
+                </div>
+          : <div className='itemcount'>
+                <div className='contador'>
+                {num0
+                  ? <button disabled className='disabled' onClick={() => { decrease() }}>-</button>
+                  : <button className='button' onClick={() => { decrease() }}>-</button>}
+                <h5>{number}</h5>
+                {numMax
+                  ? <button disabled className='disabled' onClick={() => { increase() }}>+</button>
+                  : <button className='button' onClick={() => { increase() }}>+</button>}
+                </div>
+                {num0
+                  ? <button disabled className='disabled' >Agregar al carrito</button>
+                  : <button className='button' onClick={handleItemcount}>Agregar al carrito</button>}
+                  </div>
+        }
     </>
 }
 

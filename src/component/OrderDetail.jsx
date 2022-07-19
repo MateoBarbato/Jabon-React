@@ -52,16 +52,16 @@ const OrderDetail = () => {
         }
         {conditionbuyer
           ? <>
-        <section className='orderDetailCard'>
-        <p>{buyer.tel}</p>
-        <p>{buyer.email}</p>
-        <p>{buyer.firstName}</p>
-        </section>
-        <Link className={'button'} to={'/'}>Volver al inicio</Link>
+              <section className='orderDetailCard'>
+              <p>{buyer.tel}</p>
+              <p>{buyer.email}</p>
+              <p>{buyer.firstName}</p>
+              </section>
+              <Link className={'button'} to={'/'}>Volver al inicio</Link>
         </>
           : <>
-        <h4>No se econtraron tus datos. Porfavor vuelve a intentarlo</h4>
-        <Link className={'button'} to={'/'}>Volver al inicio</Link>
+              <h4>No se econtraron tus datos. Porfavor vuelve a intentarlo</h4>
+              <Link className={'button'} to={'/'}>Volver al inicio</Link>
         </>
 
         }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Item = ({ item }) => {
   const { id, name, description, imageurl, stock } = item
+  const outstock = stock === 0
 
   return <>
     <Link to={`/item/${id}`}>
@@ -21,7 +22,7 @@ const Item = ({ item }) => {
             <button className='button'>Ver detalle del producto</button>
             </div>
             <div className="stock">
-                <h3>Stock disponible:{stock}</h3>
+                {outstock ? <h3>Out of Stock</h3> : <h3>Stock disponible:{stock}</h3>}
             </div>
         </article>
         </Link>

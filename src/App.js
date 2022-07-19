@@ -6,7 +6,7 @@ import Footer from './component/Footer'
 import NosotrosMejorado from './component/NosotrosMejorado'
 import ItemDetailContainer from './component/ItemDetailContainer'
 import NotFound from './component/NotFound'
-import Cart from './component/Cart'
+import CartContainer from './component/CartContainer'
 import CartContextProvider from './component/CartContext'
 import ThemeContextProvider from './component/ThemeContext'
 import CartForm from './component/CartForm'
@@ -29,7 +29,7 @@ function App () {
               <Route path="/nosotros" element={<NosotrosMejorado />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/category/:type" element={<Home />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart" element={<CartContainer />} />
               <Route path="/cartForm" element={<CartForm />} />
               <Route path="/orderID/:id" element={<OrderDetail />} />
               <Route path="/contact" element={<EmailContact />} />
