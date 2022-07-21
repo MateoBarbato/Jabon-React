@@ -20,23 +20,6 @@ The objective is a web-app totally functional, fast and user frendly with across
 - Data base implemented with Firebase
 - 3D created and implemented with Spline
 
-## Tech
-
-Dillinger uses a number of open source projects to work properly:
-
-
-- [Ace Editor] - awesome web-based text editor
-- [markdown-it] - Markdown parser done right. Fast and easy to extend.
-- [Twitter Bootstrap] - great UI boilerplate for modern web apps
-- [node.js] - evented I/O for the backend
-- [Express] - fast node.js network app framework [@tjholowaychuk]
-- [Gulp] - the streaming build system
-- [Breakdance](https://breakdance.github.io/breakdance/) - HTML
-to Markdown converter
-- [jQuery] - duh
-
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
 
 ## Downloading Files
 
