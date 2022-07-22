@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NosotrosMejorado = () => {
+const Nosotros = () => {
   return (<>
         <main >
           <article className="canvas">
@@ -34,4 +34,4 @@ const NosotrosMejorado = () => {
   )
 }
 
-export default NosotrosMejorado
+export default Nosotros

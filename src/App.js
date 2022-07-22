@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './component/Home'
 import Header from './component/Header'
 import Footer from './component/Footer'
-import NosotrosMejorado from './component/NosotrosMejorado'
+import Nosotros from './component/Nosotros'
 import ItemDetailContainer from './component/ItemDetailContainer'
 import NotFound from './component/NotFound'
 import CartContainer from './component/CartContainer'
@@ -26,7 +26,7 @@ function App () {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/nosotros" element={<NosotrosMejorado />} />
+              <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/category/:type" element={<Home />} />
               <Route path="/cart" element={<CartContainer />} />
