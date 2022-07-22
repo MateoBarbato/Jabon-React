@@ -404,11 +404,15 @@ nav ul li a {
   color: white;
 }
 
+
 .orderDetail .itemCart,
 .orderDetail-dark .itemCart {
   height: 10vh;
   width: 50%;
   font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .orderDetailCard {
@@ -679,7 +683,7 @@ nav ul li a {
 .text {
   color: white;
   letter-spacing: 1px;
-  font-size: 35px;
+  font-size: 2vw;
 }
 
 .text > h2,
@@ -988,6 +992,7 @@ footer h4 a {
 
   .nosotros-text-container .text {
     width: 80%;
+    font-size: 3vw;
   }
 
   .notFoundContainer div img {
@@ -1084,6 +1089,10 @@ footer h4 a {
   .nosotros-text-container{
     padding-top: 10vh;
   }
+
+  .nosotros-text-container .text{
+    font-size: 4vw;
+  }
   
 }
 
@@ -1158,9 +1167,6 @@ footer h4 a {
     padding:0 1rem 1rem 0;
   }
 
-  .creditos{
-    display: none;
-  }
  
   .cart-muestra-gracias img {
     width: 100%;
@@ -1180,6 +1186,23 @@ footer h4 a {
   .itemCart .img{
     display: none;
   }
+
+  .orderDetail h2 , .orderDetail h2{
+    width: 90%;
+    
+  }
+
+  .orderDetail .itemCart, .orderDetail-dark .itemCart{
+    width: 90%;
+    height: 40vh;
+  }
+
+  
+
+  .orderDetailCard{
+    width: 90%;
+    height: 40vh;
+  }
 }
 
 @media all and (max-width: 330px) {
@@ -1194,5 +1217,9 @@ footer h4 a {
 
   .itemCart .img {
     display: none;
+  }
+
+  .nosotros-text-container .text{
+    font-size: 6vw;
   }
 }
