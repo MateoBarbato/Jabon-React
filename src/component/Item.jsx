@@ -4,26 +4,30 @@ import { Link } from 'react-router-dom'
 
 const Item = ({ item }) => {
   const { id, name, description, imageurl, stock } = item
-  const outstock = stock === 0
+  const outstock = stock <= 0
 
   return <>
     <Link to={`/item/${id}`}>
         <article className="item">
 
             <div className="title"> <h3>{name}</h3></div>
-            <div className="itemimg">
 
+            <div className="itemimg">
             <img src={process.env.PUBLIC_URL + imageurl} alt="Imagen de un Jabon Descriptiva del articulo" />
             </div>
+
             <div className="itemdescription">
              <h5>{description}</h5>
             </div>
+
             <div className="buttondetalle">
             <button className='button'>Ver detalle del producto</button>
             </div>
+
             <div className="stock">
                 {outstock ? <h3>Out of Stock</h3> : <h3>Stock disponible:{stock}</h3>}
             </div>
+
         </article>
         </Link>
     </>

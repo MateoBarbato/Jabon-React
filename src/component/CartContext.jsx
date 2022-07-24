@@ -35,14 +35,12 @@ const CartContextProvider = ({ children }) => {
   function addItemRepeated (item, ammountofitems) {
     const itemtoedit = itemsCart.find(itemarr => itemarr.id === item.id)
     const prevammount = itemtoedit.ammount
-    itemtoedit.ammount = prevammount + ammountofitems
+    itemtoedit.ammount = prevammount + ammountofitems > item.stock ? item.stock : prevammount + ammountofitems
     const arrayfiltrado = itemsCart.filter((itemarr) => itemarr.id !== item.id)
-
     setItemsCart([...arrayfiltrado, itemtoedit])
   }
 
   function clear () {
-    console.log('from cart')
     setItemsCart([])
   }
 

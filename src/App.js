@@ -16,7 +16,6 @@ import './css/App.css'
 import './css/ItemCount.css'
 import './css/Toggle.css'
 
-// PREGUNTAR DONDE VA EXACTAMENTE EL HEADER Y FOOTER
 function App () {
   return (
     <>

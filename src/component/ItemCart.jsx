@@ -17,8 +17,9 @@ const ItemCart = (item) => {
         <div className="itemCartInfo">
             <h4>{name}</h4>
             <h4>Precio por Unidad: {precio}</h4>
-            <input disabled='disabled' className='cartAmmountInput' type="number"
-            defaultValue={ammount} />
+            <div className='cartAmmountInputContainer'>
+            <input disabled='disabled' className='cartAmmountInput' type="number" defaultValue={ammount} />
+            </div>
         </div>
         <div className="buttonBorrarItem">
         <button className='button' onClick={handleRemove}>Borrar item</button>

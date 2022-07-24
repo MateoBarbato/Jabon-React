@@ -36,22 +36,27 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                   <h5>{stock}</h5>
                   <button disabled className='disabled' onClick={() => { increase() }}>+</button>
                 </div>
+
                 <button disabled className='disabled' >Out of stock</button>
-                </div>
+            </div>
+
           : <div className='itemcount'>
                 <div className='contador'>
+
                 {num0
                   ? <button disabled className='disabled' onClick={() => { decrease() }}>-</button>
                   : <button className='button' onClick={() => { decrease() }}>-</button>}
                 <h5>{number}</h5>
+
                 {numMax
                   ? <button disabled className='disabled' onClick={() => { increase() }}>+</button>
                   : <button className='button' onClick={() => { increase() }}>+</button>}
                 </div>
+
                 {num0
                   ? <button disabled className='disabled' >Agregar al carrito</button>
                   : <button className='button' onClick={handleItemcount}>Agregar al carrito</button>}
-                  </div>
+              </div>
         }
     </>
 }

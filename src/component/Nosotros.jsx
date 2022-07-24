@@ -3,9 +3,11 @@ import React from 'react'
 const Nosotros = () => {
   return (<>
         <main >
+
           <article className="canvas">
               <iframe src='https://my.spline.design/untitled-0ab79df5a652e3ac97f66e4aa3704993/' frameBorder='0' width='100%' height='100%'></iframe>
           </article>
+
           <article className='nosotros-text-container'>
           <section className="text">
                   <h2>Gracias por confiar en Jaboon!</h2>

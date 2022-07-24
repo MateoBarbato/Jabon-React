@@ -6,7 +6,9 @@ const CartForm = ({ onSubmit }) => {
 
   return <>
       <section className='cartformcontainer'>
+
         <form className='cartform-form' onSubmit={handleSubmit(onSubmit)}>
+
         <div className="form-errors">
         <input {...register('firstName', { required: true })} placeholder={'Name'} />
         {errors.firstName && <p>Name field is required</p>}
@@ -19,6 +21,7 @@ const CartForm = ({ onSubmit }) => {
         <input {...register('tel', { required: true })} placeholder={'11-412-1**'}/>
         {errors.tel && <p>Tel field is required</p>}
         </div>
+
         <input type="submit" />
         </form>
 
