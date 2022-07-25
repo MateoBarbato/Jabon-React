@@ -25,7 +25,7 @@ const Item = ({ item }) => {
             </div>
 
             <div className="stock">
-                {outstock ? <h3>Out of Stock</h3> : <h3>Stock disponible:{stock}</h3>}
+                {outstock ? <h3>Out of Stock</h3> : <h3>Stock disponible: {stock}</h3>}
             </div>
 
         </article>
