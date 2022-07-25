@@ -412,6 +412,7 @@ nav ul li a {
   overflow-y: scroll;
 }
 
+
 .orderDetail-dark {
   background-image: var(--background-dark);
   background-color: var(--background-black);
@@ -419,6 +420,11 @@ nav ul li a {
 
 .orderDetail-dark h2 {
   color: white;
+}
+
+.orderDetail .itemCart .itemCartInfo input,
+.orderDetail-dark .itemCart .itemCartInfo input{
+  width: 5vh;
 }
 
 .orderDetail .itemCart,
