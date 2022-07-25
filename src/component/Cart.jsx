@@ -14,7 +14,7 @@ const Cart = ({ onSubmit }) => {
     {itemsCart.map(item => <ItemCart key={item.id} item={item}/>)}
     <section className='cartInfo'>
         <div className="cartPrice">
-            <p>Precio total:{totalprice}</p>
+            <p>Precio total: {totalprice}</p>
         </div>
     <div className='buttonClear'>
         <button onClick={clear} className='button'>Borrar Todo</button>

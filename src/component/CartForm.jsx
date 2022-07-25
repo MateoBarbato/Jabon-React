@@ -7,6 +7,7 @@ const CartForm = ({ onSubmit }) => {
   return <>
       <section className='cartformcontainer'>
 
+        <h4>Para terminar tu compra llena estos campos </h4>
         <form className='cartform-form' onSubmit={handleSubmit(onSubmit)}>
 
         <div className="form-errors">
@@ -18,7 +19,7 @@ const CartForm = ({ onSubmit }) => {
         {errors.email && <p>Email field is required</p>}
         </div>
         <div className="form-errors">
-        <input {...register('tel', { required: true })} placeholder={'11-412-1**'}/>
+        <input {...register('tel', { required: true })} placeholder={'Tel : 11-412-1**'}/>
         {errors.tel && <p>Tel field is required</p>}
         </div>
 
