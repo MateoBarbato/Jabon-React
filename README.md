@@ -13,12 +13,19 @@ The objective is a web-app totally functional, fast and user frendly with across
   Visit the webapp of the proyect already deployed and feel free to go trought all the functionalities.
 
 
-
 ## Features
 
 - E-shop based on ReactJs
 - Data base implemented with Firebase
 - 3D created and implemented with Spline
+
+
+# Dependencies 
+
+- [React Dom Router](https://v5.reactrouter.com/web/guides/quick-start)
+  used for all the route managment of the proyect
+- [FormSubmit](https://formsubmit.co)
+  used for managing the back-end part of the form for email contacts.
 
 
 ## Downloading Files
@@ -110,6 +117,9 @@ If for any reason the user goes to a unknown route if will find a notFound route
 ![image](https://user-images.githubusercontent.com/62154295/180807191-2cdad4a0-4aac-40e2-a050-b148672ca18c.png)
 
 
+## Video Showing the website 
+
+https://user-images.githubusercontent.com/62154295/180832007-15555c0a-f142-487d-ad73-f6691c40c153.mp4
 
 
 
