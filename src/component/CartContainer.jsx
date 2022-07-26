@@ -46,7 +46,6 @@ const CartContainer = () => {
           ...documentSnapshot.data(),
           id: documentSnapshot.id,
         }
-
         if (producto.stock >= productoEnCart.ammount) {
           batch.update(doc(database, 'items', producto.id), {
             stock: producto.stock - productoEnCart.ammount,
@@ -56,6 +55,13 @@ const CartContainer = () => {
         }
       })
     })
+    if(outOfStock.length > 0) {
+      let mensaje = ''
+      for (const producto of outOfStock) {
+        mensaje += `${producto.title}`
+      }
+      console.log(`No hay stock suficiente para los siguientes productos: ${mensaje}`)
+    }
 
     if (outOfStock.length === 0) {
       addDoc(collection(database, 'orders'), order)
@@ -76,13 +82,8 @@ const CartContainer = () => {
           setOrder(true)
           clear()
         })
-    } else {
-      let mensaje = ''
-      for (const producto of outOfStock) {
-        mensaje += `${producto.title}`
-      }
-      console.log(`No hay stock suficiente para los siguientes productos: ${mensaje}`)
-    }
+    } 
+    
   }
 
   const onSubmitCart = (data) => {
