@@ -22,7 +22,11 @@ The objective is a web-app totally functional, fast and user frendly with across
 
 # Dependencies 
 
-- React Dom Router (https://v5.reactrouter.com/web/guides/quick-start)
+- [React Dom Router](https://v5.reactrouter.com/web/guides/quick-start)
+  used for all the route managment of the proyect
+- [FormSubmit](https://formsubmit.co)
+  used for managing the back-end part of the form for email contacts.
+
 
 ## Downloading Files
 
