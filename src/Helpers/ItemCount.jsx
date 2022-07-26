@@ -30,7 +30,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <>
-      {outStock ? (
+      {outStock
+        ? (
         <div className="itemcount">
           <div className="contador  disabled">
             <button
@@ -58,10 +59,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             Out of stock
           </button>
         </div>
-      ) : (
+          )
+        : (
         <div className="itemcount">
           <div className="contador">
-            {num0 ? (
+            {num0
+              ? (
               <button
                 disabled
                 className="disabled"
@@ -71,7 +74,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
               >
                 -
               </button>
-            ) : (
+                )
+              : (
               <button
                 className="button"
                 onClick={() => {
@@ -80,10 +84,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
               >
                 -
               </button>
-            )}
+                )}
             <h5>{number}</h5>
 
-            {numMax ? (
+            {numMax
+              ? (
               <button
                 disabled
                 className="disabled"
@@ -93,7 +98,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
               >
                 +
               </button>
-            ) : (
+                )
+              : (
               <button
                 className="button"
                 onClick={() => {
@@ -102,20 +108,22 @@ const ItemCount = ({ stock, initial, onAdd }) => {
               >
                 +
               </button>
-            )}
+                )}
           </div>
 
-          {num0 ? (
+          {num0
+            ? (
             <button disabled className="disabled">
               Agregar al carrito
             </button>
-          ) : (
+              )
+            : (
             <button className="button" onClick={handleItemcount}>
               Agregar al carrito
             </button>
-          )}
+              )}
         </div>
-      )}
+          )}
     </>
   )
 }

@@ -5,7 +5,7 @@ const CartForm = ({ onSubmit }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm()
 
   return (

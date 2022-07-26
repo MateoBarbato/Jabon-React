@@ -1,6 +1,6 @@
 import { React, useContext } from 'react'
-import { CartContext } from './Context/CartContext'
-import CartWidget from './CartWidget'
+import { CartContext } from '../Context/CartContext'
+import CartWidget from '../Helpers/CartWidget'
 import DarkMode from './DarkMode'
 import { NavLink } from 'react-router-dom'
 

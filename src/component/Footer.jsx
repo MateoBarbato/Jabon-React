@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { ThemeContext } from './Context/ThemeContext'
+import { ThemeContext } from '../Context/ThemeContext'
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext)

@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
-import ItemCount from './ItemCount'
+import ItemCount from '../Helpers/ItemCount'
 
 import { Link } from 'react-router-dom'
-import { CartContext } from './Context/CartContext'
-import { ThemeContext } from './Context/ThemeContext'
+import { CartContext } from '../Context/CartContext'
+import { ThemeContext } from '../Context/ThemeContext'
 
 const ItemDetail = ({ item }) => {
   const { id, name, precio, description, stock, initial, imageurl } = item
@@ -40,9 +40,11 @@ const ItemDetail = ({ item }) => {
             </div>
             <div className="itemDetail_info_precio">
               <p>{`Precio: ${precio}`}</p>
-              {itemcount ? (
+              {itemcount
+                ? (
                 <ItemCount initial={initial} stock={stock} onAdd={onAdd} />
-              ) : (
+                  )
+                : (
                 <>
                   <Link to="/">
                     <button className="button">Seguir Comprando</button>
@@ -51,7 +53,7 @@ const ItemDetail = ({ item }) => {
                     <button className="button">Terminar mi compra</button>
                   </Link>
                 </>
-              )}
+                  )}
             </div>
           </div>
         </div>

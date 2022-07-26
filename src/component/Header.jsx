@@ -1,6 +1,6 @@
 import { useContext, React } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import { ThemeContext } from './Context/ThemeContext'
+import { ThemeContext } from '../Context/ThemeContext'
 import NavBar from './NavBar'
 const Header = () => {
   const { theme } = useContext(ThemeContext)

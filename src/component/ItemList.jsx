@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Item from './Item'
 
-import { ThemeContext } from './Context/ThemeContext'
+import { ThemeContext } from '../Context/ThemeContext'
 
 const ItemList = ({ items }) => {
   const { theme } = useContext(ThemeContext)

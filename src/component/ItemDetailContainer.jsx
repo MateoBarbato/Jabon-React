@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { useParams } from 'react-router-dom'
 import ItemDetail from './ItemDetail'
-import Loading from './Loading'
+import Loading from '../Helpers/Loading'
 // import {itemsPromiseid} from './itemsPromise'
 import { doc, getDoc } from 'firebase/firestore'
 import { database } from '../firebase'

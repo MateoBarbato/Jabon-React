@@ -21,17 +21,17 @@ const CartContextProvider = ({ children }) => {
     setTotalprice(precio)
   }, [itemsCart])
 
-  function checkitems() {
+  function checkitems () {
     return console.log(itemsCart)
   }
 
-  function addItem(item, ammount) {
+  function addItem (item, ammount) {
     item.ammount = ammount
     const newItemsCart = [...itemsCart, item]
     setItemsCart(newItemsCart)
   }
 
-  function addItemRepeated(item, ammountofitems) {
+  function addItemRepeated (item, ammountofitems) {
     const itemtoedit = itemsCart.find((itemarr) => itemarr.id === item.id)
     const prevammount = itemtoedit.ammount
     itemtoedit.ammount =
@@ -42,17 +42,17 @@ const CartContextProvider = ({ children }) => {
     setItemsCart([...arrayfiltrado, itemtoedit])
   }
 
-  function clear() {
+  function clear () {
     setItemsCart([])
   }
 
-  function removeItem(itemid) {
+  function removeItem (itemid) {
     const arraynuevo = itemsCart.filter((item) => item.id !== itemid)
 
     setItemsCart(arraynuevo)
   }
 
-  function isInCart(id) {
+  function isInCart (id) {
     if (itemsCart.find((item) => item.id === id) === undefined) {
       return true
     } else {
@@ -72,7 +72,7 @@ const CartContextProvider = ({ children }) => {
         itemsCart,
         cartAmmount,
         totalprice,
-        setTotalprice,
+        setTotalprice
       }}
     >
       {children}

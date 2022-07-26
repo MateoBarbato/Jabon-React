@@ -1,12 +1,23 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { ThemeContext } from './Context/ThemeContext'
+import { ThemeContext } from '../Context/ThemeContext'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const OrderID = ({ id }) => {
+  const MySwal = withReactContent(Swal)
   const { theme } = useContext(ThemeContext)
   const themecondition = theme
     ? 'cart-muestra-id-container-dark'
     : 'cart-muestra-id-container'
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(id)
+    MySwal.fire({
+      title: 'Order ID copiada',
+      timer: 1000,
+      timerProgressBar: true
+    })
+  }
 
   return (
     <article>
@@ -20,7 +31,11 @@ const OrderID = ({ id }) => {
             Gracias Por Comprar Con Nosotros! Ahora eres parte de la familia Jaboon!
           </h3>
         </div>
-        <h4 className="cart-muestra-id">Tu numero de Orden De Compra es : {id}</h4>
+        <button className="cart-muestra-id" onClick={copyToClipboard}>
+          <h4>
+          Tu numero de Orden De Compra es : {id}
+          </h4>
+        </button>
         <div className="cart-muestra-links">
           <Link className="button" to="/">
             Volver al Home

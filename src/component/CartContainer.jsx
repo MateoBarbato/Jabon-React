@@ -1,17 +1,10 @@
 /* eslint-disable */
 import React, { useContext, useState } from 'react'
-import {
-  collection,
-  addDoc,
-  doc,
-  updateDoc,
-  getDoc,
-  writeBatch,
-} from 'firebase/firestore'
+import {collection, addDoc, doc, getDoc, writeBatch} from 'firebase/firestore'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { database } from '../firebase'
-import { CartContext } from './Context/CartContext'
+import { CartContext } from '../Context/CartContext'
 import EmptyCart from './EmptyCart'
 import OrderID from './OrderID'
 import Cart from './Cart'

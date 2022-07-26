@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import CartForm from './CartForm'
 import ItemCart from './ItemCart'
-import { ThemeContext } from './Context/ThemeContext'
-import { CartContext } from './Context/CartContext'
+import { ThemeContext } from '../Context/ThemeContext'
+import { CartContext } from '../Context/CartContext'
 
 const Cart = ({ onSubmit }) => {
   const { theme } = useContext(ThemeContext)
