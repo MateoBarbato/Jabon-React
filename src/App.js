@@ -11,7 +11,6 @@ import CartContextProvider from './Context/CartContext'
 import ThemeContextProvider from './Context/ThemeContext'
 import CartForm from './component/CartForm'
 import OrderDetail from './component/OrderDetail'
-
 import './css/App.css'
 import './css/ItemCount.css'
 import './css/Toggle.css'
