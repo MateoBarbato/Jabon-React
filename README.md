@@ -13,13 +13,16 @@ The objective is a web-app totally functional, fast and user frendly with across
   Visit the webapp of the proyect already deployed and feel free to go trought all the functionalities.
 
 
-
 ## Features
 
 - E-shop based on ReactJs
 - Data base implemented with Firebase
 - 3D created and implemented with Spline
 
+
+# Dependencies 
+
+- React Dom Router (https://v5.reactrouter.com/web/guides/quick-start)
 
 ## Downloading Files
 
