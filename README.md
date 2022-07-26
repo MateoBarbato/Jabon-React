@@ -26,8 +26,9 @@ The objective is a web-app totally functional, fast and user frendly with across
   used for all the route managment of the proyect
 - [FormSubmit](https://formsubmit.co)
   used for managing the back-end part of the form for email contacts.
-
-
+- [SweetAlerts 2](https://sweetalert2.github.io/recipe-gallery/sweetalert2-react.html)
+  The website uses SweetAlerts for giving confirmation on the order process and giving some information on plain sight.
+   Sweet alerts allows the use of alerts while being user friendly and mantaining the user experiene enjoyable.
 ## Downloading Files
 
 Jaboon requires [React](https://reactjs.org) v8^+ to run.
