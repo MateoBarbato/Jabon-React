@@ -1,35 +1,33 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { ThemeContext } from './ThemeContext'
+import { ThemeContext } from './Context/ThemeContext'
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext)
   const themecondition = theme ? 'footer-theme-dark' : 'footer-theme'
 
   return (
-      <div className={themecondition}>
-      <footer >
-
+    <div className={themecondition}>
+      <footer>
         <ul>
           <li>
-           <Link to= {'/'}>Twitter</Link>
+            <Link to={'/'}>Twitter</Link>
           </li>
           <li>
-            <Link to= {'/'}>Instagram</Link>
+            <Link to={'/'}>Instagram</Link>
           </li>
           <li>
-            <Link to= {'/'}>WhatsApp</Link>
+            <Link to={'/'}>WhatsApp</Link>
           </li>
         </ul>
-        <div className='footer-div-marca'>
-        <h4 >Jaboon Company ©</h4>
-        <h4>
-          <Link to= {'/'}>Barbatomateo@gmail.com</Link>
-        </h4>
+        <div className="footer-div-marca">
+          <h4>Jaboon Company ©</h4>
+          <h4>
+            <Link to={'/'}>Barbatomateo@gmail.com</Link>
+          </h4>
         </div>
-
       </footer>
-      </div>
+    </div>
   )
 }
 

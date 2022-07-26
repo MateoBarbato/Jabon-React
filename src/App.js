@@ -7,8 +7,8 @@ import Nosotros from './component/Nosotros'
 import ItemDetailContainer from './component/ItemDetailContainer'
 import NotFound from './component/NotFound'
 import CartContainer from './component/CartContainer'
-import CartContextProvider from './component/CartContext'
-import ThemeContextProvider from './component/ThemeContext'
+import CartContextProvider from './component/Context/CartContext'
+import ThemeContextProvider from './component/Context/ThemeContext'
 import CartForm from './component/CartForm'
 import OrderDetail from './component/OrderDetail'
 import EmailContact from './component/EmailContact'
@@ -16,7 +16,7 @@ import './css/App.css'
 import './css/ItemCount.css'
 import './css/Toggle.css'
 
-function App () {
+function App() {
   return (
     <>
       <BrowserRouter>

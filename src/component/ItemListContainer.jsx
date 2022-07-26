@@ -27,23 +27,25 @@ const ItemListContainer = () => {
           setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
         })
         .catch('Hubo un error!!!!! Corran')
-        .finally(() => { setSpinner(false) })
+        .finally(() => {
+          setSpinner(false)
+        })
     } else {
       const q = query(itemsCollection, where('type', '==', filter))
       getDocs(q)
         .then((snapshot) => {
-          if (snapshot.size === 0) { console.log('Request Vacia') }
+          if (snapshot.size === 0) {
+            console.log('Request Vacia')
+          }
           setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
         })
         .catch('Hubo un error!!!!! Corran')
-        .finally(() => { setSpinner(false) })
+        .finally(() => {
+          setSpinner(false)
+        })
     }
   }, [filter])
 
-  return <>
-        {spinner
-          ? <Loading/>
-          : <ItemList items={itemsarr}/>}
-        </>
+  return <>{spinner ? <Loading /> : <ItemList items={itemsarr} />}</>
 }
 export default ItemListContainer

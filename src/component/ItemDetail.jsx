@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react'
 import ItemCount from './ItemCount'
 
 import { Link } from 'react-router-dom'
-import { CartContext } from './CartContext'
-import { ThemeContext } from './ThemeContext'
+import { CartContext } from './Context/CartContext'
+import { ThemeContext } from './Context/ThemeContext'
 
 const ItemDetail = ({ item }) => {
   const { id, name, precio, description, stock, initial, imageurl } = item
@@ -27,31 +27,35 @@ const ItemDetail = ({ item }) => {
 
   return (
     <section className={themecondition}>
-        <article className="itemDetailContainer">
-                    <div className="itemDetail">
-                        <div className="itemDetailimg">
-                            <img src={imageurl} alt="" />
-                        </div>
-                        <div className="itemDetail_info">
-                            <h2 className='itemDetail_info_titulo'>{name}</h2>
-                            <div className="itemDetail_info_description">
-                            <p>{description}</p>
-                            <p>{description}</p>
-                            </div>
-                            <div className='itemDetail_info_precio'>
-                            <p>{`Precio: ${precio}`}</p>
-                            {itemcount
-                              ? <ItemCount initial={initial} stock={stock} onAdd={onAdd} />
-                              : <>
-                                <Link to='/'><button className='button'>Seguir Comprando</button></Link>
-                                <Link to='/cart'><button className='button'>Terminar mi compra</button></Link>
-                                </>}
-
-                            </div>
-
-                        </div>
-                    </div>
-        </article>
+      <article className="itemDetailContainer">
+        <div className="itemDetail">
+          <div className="itemDetailimg">
+            <img src={imageurl} alt="" />
+          </div>
+          <div className="itemDetail_info">
+            <h2 className="itemDetail_info_titulo">{name}</h2>
+            <div className="itemDetail_info_description">
+              <p>{description}</p>
+              <p>{description}</p>
+            </div>
+            <div className="itemDetail_info_precio">
+              <p>{`Precio: ${precio}`}</p>
+              {itemcount ? (
+                <ItemCount initial={initial} stock={stock} onAdd={onAdd} />
+              ) : (
+                <>
+                  <Link to="/">
+                    <button className="button">Seguir Comprando</button>
+                  </Link>
+                  <Link to="/cart">
+                    <button className="button">Terminar mi compra</button>
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
   )
 }

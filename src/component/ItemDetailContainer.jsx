@@ -17,20 +17,21 @@ const ItemDetailContainer = () => {
     const db = database
 
     const itembyid = doc(db, 'items', id)
-    getDoc(itembyid).then((snapshot) => {
-      if (snapshot.exists()) { setItem({ id: snapshot.id, ...snapshot.data() }) }
-    })
-      .catch(error => { console.log(error) })
-      .finally(() => { setSpinner(false) })
+    getDoc(itembyid)
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          setItem({ id: snapshot.id, ...snapshot.data() })
+        }
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+      .finally(() => {
+        setSpinner(false)
+      })
   }, [id])
 
-  return (<>
-
-        {spinner
-          ? <Loading/>
-          : <ItemDetail item={item}/>}
-        </>
-  )
+  return <>{spinner ? <Loading /> : <ItemDetail item={item} />}</>
 }
 
 export default ItemDetailContainer

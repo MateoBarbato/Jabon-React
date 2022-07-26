@@ -5,7 +5,7 @@ export const ThemeContext = createContext()
 const ThemeContextProvider = ({ children }) => {
   const [theme, setTheme] = useState(false)
 
-  function changeTheme () {
+  function changeTheme() {
     if (theme === false) {
       setTheme(true)
     } else if (theme === true) {
@@ -15,8 +15,7 @@ const ThemeContextProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ changeTheme, theme }}>
-        {children}
-
+      {children}
     </ThemeContext.Provider>
   )
 }

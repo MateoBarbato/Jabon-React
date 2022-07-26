@@ -11,12 +11,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const increase = () => {
     if (number < stock) {
-      return setNumber(prevNumber => prevNumber + 1)
+      return setNumber((prevNumber) => prevNumber + 1)
     }
   }
   const decrease = () => {
     if (number > 0) {
-      return setNumber(prevNumber => prevNumber - 1)
+      return setNumber((prevNumber) => prevNumber - 1)
     }
   }
 
@@ -28,37 +28,96 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     onAdd(false, ammount)
   }
 
-  return <>
-        {outStock
-          ? <div className='itemcount'>
-                <div className='contador  disabled'>
-                  <button disabled className='disabled' onClick={() => { decrease() }}>-</button>
-                  <h5>{stock}</h5>
-                  <button disabled className='disabled' onClick={() => { increase() }}>+</button>
-                </div>
+  return (
+    <>
+      {outStock ? (
+        <div className="itemcount">
+          <div className="contador  disabled">
+            <button
+              disabled
+              className="disabled"
+              onClick={() => {
+                decrease()
+              }}
+            >
+              -
+            </button>
+            <h5>{stock}</h5>
+            <button
+              disabled
+              className="disabled"
+              onClick={() => {
+                increase()
+              }}
+            >
+              +
+            </button>
+          </div>
 
-                <button disabled className='disabled' >Out of stock</button>
-            </div>
+          <button disabled className="disabled">
+            Out of stock
+          </button>
+        </div>
+      ) : (
+        <div className="itemcount">
+          <div className="contador">
+            {num0 ? (
+              <button
+                disabled
+                className="disabled"
+                onClick={() => {
+                  decrease()
+                }}
+              >
+                -
+              </button>
+            ) : (
+              <button
+                className="button"
+                onClick={() => {
+                  decrease()
+                }}
+              >
+                -
+              </button>
+            )}
+            <h5>{number}</h5>
 
-          : <div className='itemcount'>
-                <div className='contador'>
+            {numMax ? (
+              <button
+                disabled
+                className="disabled"
+                onClick={() => {
+                  increase()
+                }}
+              >
+                +
+              </button>
+            ) : (
+              <button
+                className="button"
+                onClick={() => {
+                  increase()
+                }}
+              >
+                +
+              </button>
+            )}
+          </div>
 
-                {num0
-                  ? <button disabled className='disabled' onClick={() => { decrease() }}>-</button>
-                  : <button className='button' onClick={() => { decrease() }}>-</button>}
-                <h5>{number}</h5>
-
-                {numMax
-                  ? <button disabled className='disabled' onClick={() => { increase() }}>+</button>
-                  : <button className='button' onClick={() => { increase() }}>+</button>}
-                </div>
-
-                {num0
-                  ? <button disabled className='disabled' >Agregar al carrito</button>
-                  : <button className='button' onClick={handleItemcount}>Agregar al carrito</button>}
-              </div>
-        }
+          {num0 ? (
+            <button disabled className="disabled">
+              Agregar al carrito
+            </button>
+          ) : (
+            <button className="button" onClick={handleItemcount}>
+              Agregar al carrito
+            </button>
+          )}
+        </div>
+      )}
     </>
+  )
 }
 
 export default ItemCount

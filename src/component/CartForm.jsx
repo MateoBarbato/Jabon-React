@@ -2,32 +2,41 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 
 const CartForm = ({ onSubmit }) => {
-  const { register, handleSubmit, formState: { errors } } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
 
-  return <>
-      <section className='cartformcontainer'>
-
+  return (
+    <>
+      <section className="cartformcontainer">
         <h4>Para terminar tu compra llena estos campos </h4>
-        <form className='cartform-form' onSubmit={handleSubmit(onSubmit)}>
+        <form className="cartform-form" onSubmit={handleSubmit(onSubmit)}>
+          <div className="form-errors">
+            <input {...register('firstName', { required: true })} placeholder={'Name'} />
+            {errors.firstName && <p>Name field is required</p>}
+          </div>
+          <div className="form-errors">
+            <input
+              {...register('email', { required: true })}
+              placeholder={'mynameis@email.com'}
+            />
+            {errors.email && <p>Email field is required</p>}
+          </div>
+          <div className="form-errors">
+            <input
+              {...register('tel', { required: true })}
+              placeholder={'Tel : 11-412-1**'}
+            />
+            {errors.tel && <p>Tel field is required</p>}
+          </div>
 
-        <div className="form-errors">
-        <input {...register('firstName', { required: true })} placeholder={'Name'} />
-        {errors.firstName && <p>Name field is required</p>}
-        </div>
-        <div className="form-errors">
-        <input {...register('email', { required: true })} placeholder={'mynameis@email.com'}/>
-        {errors.email && <p>Email field is required</p>}
-        </div>
-        <div className="form-errors">
-        <input {...register('tel', { required: true })} placeholder={'Tel : 11-412-1**'}/>
-        {errors.tel && <p>Tel field is required</p>}
-        </div>
-
-        <input type="submit" />
+          <input type="submit" />
         </form>
-
       </section>
-     </>
+    </>
+  )
 }
 // defaultValue
 

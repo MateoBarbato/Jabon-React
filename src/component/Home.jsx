@@ -6,8 +6,7 @@ import ItemListContainer from './ItemListContainer'
 // ACLARO PORQUE EN EL RUTEO PARECE QUE SE PUEDE PONER DIRECTAMENTE QUE RENDERICE ITEMLISTCONTAINER
 
 const Home = () => {
-  return (
-            <ItemListContainer />)
+  return <ItemListContainer />
 }
 
 export default Home
