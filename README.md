@@ -49,7 +49,7 @@ npm start
 
 Once you do this it will automatically open a window in your default browser with the proyect in it.
 
-By default it runs in ```localhost:4000``` but you can change it depending of your preference following this steps  or reading this [tutorial](https://devdojo.com/howtoubuntu/how-to-change-reactjs-localhost-port):
+By default it runs in ```localhost:4000``` on Windows and ```localhost:3000``` on Linux and Mac, but you can change it depending of your preference following this steps  or reading this [tutorial](https://devdojo.com/howtoubuntu/how-to-change-reactjs-localhost-port):
 
 - First look for the package.json file in your proyect folder
 
