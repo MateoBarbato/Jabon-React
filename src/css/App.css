@@ -280,7 +280,7 @@ nav ul li a {
 }
 
 .cartformcontainer {
-  min-height: 15vh;
+  min-height: 45vh;
   width: 100%;
   display: flex;
   justify-content: center;
