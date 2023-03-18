@@ -8,7 +8,7 @@ import { database } from '../firebase'
 
 const ItemListContainer = () => {
   const [spinner, setSpinner] = useState(false)
-  const [itemsarr, setItems] = useState()
+  const [itemsarr, setItemsArr] = useState()
   const [filter, setFilter] = useState('')
   const { type } = useParams()
 
@@ -24,7 +24,7 @@ const ItemListContainer = () => {
     if (filter === '') {
       getDocs(itemsCollection)
         .then((snapshot) => {
-          setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+          setItemsArr(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
         })
         .catch('Hubo un error!!!!! Corran')
         .finally(() => {
@@ -37,7 +37,7 @@ const ItemListContainer = () => {
           if (snapshot.size === 0) {
             console.log('Request Vacia')
           }
-          setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+          setItemsArr(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
         })
         .catch('Hubo un error!!!!! Corran')
         .finally(() => {
